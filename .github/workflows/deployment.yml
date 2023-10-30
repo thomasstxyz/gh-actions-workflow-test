@@ -43,6 +43,7 @@ jobs:
           echo "running 'terraform plan'..."
   deploy_to_prod_environment:
     if: github.event_name == 'release'
+    needs: deploy_to_demo_environment
     name: "[prod] Apply Terraform deployment"
     runs-on: ubuntu-latest
     environment: prod
