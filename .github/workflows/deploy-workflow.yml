@@ -22,6 +22,7 @@ on:
 jobs:
   terraform:
     name: "Run Terraform"
+    if: github.event.inputs.apply == 'false'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -36,7 +37,7 @@ jobs:
 
   terraform_apply:
     name: "Run Terraform"
-    if: github.event_name == 'release' && github.event.inputs.apply == 'true'
+    if: github.event.inputs.apply == 'true'
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     steps:
