@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.5.0...v1.6.0) (2023-10-30)
+
+
+### Features
+
+* add prod deployment ([77b6fd9](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/77b6fd9b422aaf1a2809d537899e5519cd959df1))
+
 ## [1.5.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.4.0...v1.5.0) (2023-10-30)
 
 
