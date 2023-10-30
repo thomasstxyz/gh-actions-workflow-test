@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.11.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.11.1...v1.11.2) (2023-10-30)
+
+
+### Bug Fixes
+
+* adfjkasdf ([ebe82cc](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/ebe82cc72cdd2fadbf4d99c081241727481378d7))
+* aksdfjkasd ([80b4533](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/80b45336912ae56f931c27755e589745fac7de71))
+* asdfkasd ([07cff09](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/07cff09e59a9d38261e9a97752d3046fc9e384a5))
+* blurasdfasdf ([4151344](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/4151344e4b1d2597fe907416c7e7e57fcd433a9c))
+* jafasdf ([fbd6df3](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/fbd6df36bf2aa406aa9c7f7b6e7df241ca5dfee5))
+
 ## [1.11.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.11.0...v1.11.1) (2023-10-30)
 
 
