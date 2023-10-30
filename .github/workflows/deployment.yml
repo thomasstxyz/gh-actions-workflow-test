@@ -9,6 +9,15 @@ on:
     branches: ["main"]
 
 jobs:
+  validate_terraform_demo_environment:
+    name: "[demo] Validate Terraform code"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: "Terraform plan (demo environment)"
+        run: |
+          echo "environment: demo"
+          echo "running 'terraform validate'..."
   plan_deploy_to_demo_environment:
     name: "[demo] Plan Terraform deployment"
     runs-on: ubuntu-latest
