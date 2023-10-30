@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.10.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.9.0...v1.10.0) (2023-10-30)
+
+
+### Features
+
+* **ci,prod:** add tf validate step ([0dc719f](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/0dc719f33669ea13171bdf4e6f8029dc1d03675f))
+* implement re-useable workflow ([bcf590e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/bcf590efd4fd43e3c78a4eb6c3a8cb6620a2dab0))
+
+
+### Bug Fixes
+
+* remove environment key from re-usable workflow caller ([6f49d83](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/6f49d83cd063a3d61eb464b6bcc36e29ea7429b7))
+* set environment ([7dfb98f](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/7dfb98f5c62bc0d1ed2ac3d7c80763426e1f1cd7))
+
 ## [1.9.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.8.0...v1.9.0) (2023-10-30)
 
 
