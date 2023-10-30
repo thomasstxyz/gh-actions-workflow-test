@@ -34,6 +34,11 @@ jobs:
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform plan'..."
+      - name: bla
+        run: |
+          echo $abc
+        env:
+          abc: ${{ github }}
 
   terraform_apply:
     name: "Run Terraform"
