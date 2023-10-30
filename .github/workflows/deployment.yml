@@ -21,7 +21,7 @@ jobs:
   deploy_to_demo_environment:
     if: github.event_name == 'release'
     name: "[demo] Apply Terraform deployment"
-    environment: demo
+    # environment: demo
     uses: ./.github/workflows/deploy-workflow.yml
     with:
       environment: demo
@@ -41,7 +41,7 @@ jobs:
   deploy_to_prod_environment:
     if: github.event_name == 'release'
     name: "[prod] Apply Terraform deployment"
-    environment: prod
+    # environment: prod
     uses: ./.github/workflows/deploy-workflow.yml
     with:
       environment: prod
