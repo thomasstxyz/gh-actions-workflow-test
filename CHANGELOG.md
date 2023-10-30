@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.12.0...v1.13.0) (2023-10-30)
+
+
+### Features
+
+* rename stuff ([8cc35e9](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/8cc35e9e8a2827a659390d4faaf8c0cea2657311))
+
 ## [1.12.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.11.4...v1.12.0) (2023-10-30)
 
 
