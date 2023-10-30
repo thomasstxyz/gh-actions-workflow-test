@@ -22,7 +22,7 @@ on:
 jobs:
   terraform:
     name: "Dry-run Terraform"
-    if: ${{ inputs.apply == false || (github.event_name == 'release' inputs.apply == true) }}
+    if: inputs.apply == false || (github.event_name == 'release' && inputs.apply == true)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
