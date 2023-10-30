@@ -1,3 +1,3 @@
 # gh-actions-workflow-test
 
-my feature
+my feature2
