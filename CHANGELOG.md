@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.4](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.11.3...v1.11.4) (2023-10-30)
+
+
+### Bug Fixes
+
+* string --&gt; bool ([a2b4ab1](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/a2b4ab1a6145441d502e97e95c7c92f5fea7cdad))
+
 ## [1.11.3](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.11.2...v1.11.3) (2023-10-30)
 
 
