@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.10.0...v1.11.0) (2023-10-30)
+
+
+### Features
+
+* avoid running job ([e4cd803](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/e4cd80339ce4adc773043564b7969457e7030470))
+
 ## [1.10.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.9.0...v1.10.0) (2023-10-30)
 
 
