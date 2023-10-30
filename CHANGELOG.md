@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.11.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.11.0...v1.11.1) (2023-10-30)
+
+
+### Bug Fixes
+
+* 342 ([0c52091](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/0c5209132274e33c6842f2ac99c82ec66a33ff3d))
+* blaer ([846bdf3](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/846bdf3c0f8fe0574a44b8b663b673c2f4ce1c02))
+* blaer2 ([5e5dec6](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/5e5dec651f1331ceb716dd3e8d7935fecbbf865a))
+* fixi ([97c26b0](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/97c26b00c0086dad20757ae5969986861f960c3f))
+* fluxi flaxi faks ([207977e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/207977e6afa33d645b84e78de66d80067b5f019a))
+* fuxi4 ([a34f978](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/a34f978a763885921e0dd06e05ff5404a639113f))
+
 ## [1.11.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.10.0...v1.11.0) (2023-10-30)
 
 
