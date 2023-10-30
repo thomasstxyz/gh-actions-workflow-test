@@ -55,3 +55,4 @@ jobs:
           echo "environment: ${{ inputs.ENVIRONMENT }}"
           echo "action: ${{ inputs.ACTION }}"
           echo "apply: ${{ inputs.APPLY }}"
+        environment: ${{ inputs.ENVIRONMENT }}
