@@ -24,8 +24,6 @@ jobs:
     name: "Run Terraform"
     if: ${{ inputs.apply }} == 'false'
     runs-on: ubuntu-latest
-    env:
-      abc: ${{ github }}
     steps:
       - uses: actions/checkout@v3
       - name: "Terraform validate"
@@ -39,6 +37,8 @@ jobs:
       - name: bla
         run: |
           echo $abc
+        env:
+          abc: ${{ github }}
 
   terraform_apply:
     name: "Run Terraform"
