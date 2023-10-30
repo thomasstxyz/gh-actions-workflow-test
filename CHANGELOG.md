@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.13.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.13.0...v1.13.1) (2023-10-30)
+
+
+### Bug Fixes
+
+* fixxi ([7442616](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/7442616ccf8c04319bb2b36ea1e0e5053cdef91a))
+* fuchsi ([27af7e1](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/27af7e1ebb9a9532baea4dfe01c54feef311277e))
+* fuxi ([59d4268](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/59d42686ccd474bb4ebd52106a6da5afb21e6cac))
+
 ## [1.13.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.12.0...v1.13.0) (2023-10-30)
 
 
