@@ -19,8 +19,6 @@ on:
         required: true
         default: false
 
-
-
 jobs:
   terraform:
     name: "Run Terraform"
