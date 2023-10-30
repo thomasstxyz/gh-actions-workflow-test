@@ -40,6 +40,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: "Terraform validate (prod environment)"
+        run: |
+          echo "environment: prod"
+          echo "running 'terraform validate'..."
       - name: "Terraform plan (prod environment)"
         run: |
           echo "environment: prod"
