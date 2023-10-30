@@ -38,7 +38,7 @@ jobs:
         run: |
           echo $abc
         env:
-          abc: ${{ github }}
+          abc: "${{ github }}"
 
   terraform_apply:
     name: "Run Terraform"
