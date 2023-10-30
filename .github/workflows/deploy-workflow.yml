@@ -1,0 +1,45 @@
+name: Reusable deploy workflow
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: 'Environment which should be started/stopped'
+        required: true
+        default: "lab"
+        type: string
+      action:
+        description: 'Action to be taken'
+        required: true
+        default: "apply"
+        type: string
+      apply:
+        type: boolean
+        description: 'Apply the configuration?'
+        required: true
+        default: false
+
+jobs:
+  terraform:
+    name: "Run Terraform"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: "Terraform validate"
+        run: |
+          echo "environment: ${{ inputs.environment }}"
+          echo "running 'terraform validate'..."
+      - name: "Terraform plan"
+        run: |
+          echo "environment: ${{ inputs.environment }}"
+          echo "running 'terraform plan'..."
+      - name: "Terraform apply"
+        if: github.event.inputs.apply == 'true' && github.event.inputs.action == 'apply'
+        run: |
+          echo "environment: ${{ inputs.environment }}"
+          echo "running 'terraform apply'..."
+      - name: "Terraform destroy"
+        if: github.event.inputs.apply == 'true' && github.event.inputs.action == 'destroy'
+        run: |
+          echo "environment: ${{ inputs.environment }}"
+          echo "running 'terraform destroy'..."

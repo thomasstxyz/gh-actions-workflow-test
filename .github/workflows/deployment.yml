@@ -11,52 +11,40 @@ on:
 jobs:
   plan_deploy_to_demo_environment:
     name: "[demo] Plan Terraform deployment"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: "Terraform validate (demo environment)"
-        run: |
-          echo "environment: demo"
-          echo "running 'terraform validate'..."
-      - name: "Terraform plan (demo environment)"
-        run: |
-          echo "environment: demo"
-          echo "running 'terraform plan'..."
+    uses: ./.github/workflows/deploy-workflow.yml
+    with:
+      environment: demo
+      action: apply
+      apply: false
+    secrets: inherit
+
   deploy_to_demo_environment:
     if: github.event_name == 'release'
     name: "[demo] Apply Terraform deployment"
-    runs-on: ubuntu-latest
     environment: demo
-    steps:
-      - uses: actions/checkout@v3
-      - name: "Terraform apply (demo environment)"
-        run: |
-          echo "environment: demo"
-          echo "running 'terraform apply'..."
-
+    uses: ./.github/workflows/deploy-workflow.yml
+    with:
+      environment: demo
+      action: apply
+      apply: true
+    secrets: inherit
 
   plan_deploy_to_prod_environment:
     name: "[prod] Plan Terraform deployment"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: "Terraform validate (prod environment)"
-        run: |
-          echo "environment: prod"
-          echo "running 'terraform validate'..."
-      - name: "Terraform plan (prod environment)"
-        run: |
-          echo "environment: prod"
-          echo "running 'terraform plan'..."
+    uses: ./.github/workflows/deploy-workflow.yml
+    with:
+      environment: prod
+      action: apply
+      apply: false
+    secrets: inherit
+
   deploy_to_prod_environment:
     if: github.event_name == 'release'
-    needs: deploy_to_demo_environment
     name: "[prod] Apply Terraform deployment"
-    runs-on: ubuntu-latest
     environment: prod
-    steps:
-      - uses: actions/checkout@v3
-      - name: "Terraform apply (prod environment)"
-        run: |
-          echo "environment: prod"
-          echo "running 'terraform apply'..."
+    uses: ./.github/workflows/deploy-workflow.yml
+    with:
+      environment: prod
+      action: apply
+      apply: true
+    secrets: inherit
