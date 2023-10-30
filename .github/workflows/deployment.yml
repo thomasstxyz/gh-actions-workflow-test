@@ -8,10 +8,12 @@ on:
   pull_request:
     branches: ["main"]
 
+defaults:
+  runs-on: ubuntu-latest
+
 jobs:
   validate_terraform_demo_environment:
     name: "[demo] Validate Terraform code"
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: "Terraform plan (demo environment)"
@@ -20,7 +22,6 @@ jobs:
           echo "running 'terraform validate'..."
   plan_deploy_to_demo_environment:
     name: "[demo] Plan Terraform deployment"
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: "Terraform plan (demo environment)"
@@ -30,7 +31,6 @@ jobs:
   deploy_to_demo_environment:
     if: github.event_name == 'release'
     name: "[demo] Apply Terraform deployment"
-    runs-on: ubuntu-latest
     environment: demo
     steps:
       - uses: actions/checkout@v3
@@ -42,8 +42,6 @@ jobs:
 
   plan_deploy_to_prod_environment:
     name: "[prod] Plan Terraform deployment"
-    runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
       - name: "Terraform plan (prod environment)"
@@ -54,7 +52,6 @@ jobs:
     if: github.event_name == 'release'
     needs: deploy_to_demo_environment
     name: "[prod] Apply Terraform deployment"
-    runs-on: ubuntu-latest
     environment: prod
     steps:
       - uses: actions/checkout@v3
