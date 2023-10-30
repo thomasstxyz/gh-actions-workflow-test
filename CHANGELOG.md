@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.7.0...v1.8.0) (2023-10-30)
+
+
+### Features
+
+* add 'needs' feature ([52d152b](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/52d152b7192005502a0f5e154c503bee3b37bb04))
+
 ## [1.7.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.6.0...v1.7.0) (2023-10-30)
 
 
