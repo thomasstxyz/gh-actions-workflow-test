@@ -36,7 +36,7 @@ jobs:
           echo "running 'terraform plan'..."
       - name: bla
         run: |
-          echo $abc
+          echo $abc , ${{ inputs.apply }}
         env:
           abc: "${{ github.event_name }}"
 
