@@ -10,6 +10,10 @@ on:
   pull_request:
     branches: ["main"]
 
+env:
+  ENVIRONMENT_NAME_DEMO: demo
+  ENVIRONMENT_NAME_PROD: prod
+
 jobs:
   plan_deploy_to_demo_environment:
     runs-on: ubuntu-latest
@@ -17,9 +21,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Terraform plan (demo environment)
+      - name: Terraform plan (${{ env.ENVIRONMENT_NAME_DEMO }} environment)
         run: |
-          echo "environment: demo"
+          echo "environment: ${{ env.ENVIRONMENT_NAME_DEMO }}"
           echo "running 'terraform plan'..."
 
 
@@ -28,12 +32,12 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    environment: demo
+    environment: ${{ env.ENVIRONMENT_NAME_DEMO }}
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: Terraform apply (demo environment)
+      - name: Terraform apply (${{ env.ENVIRONMENT_NAME_DEMO }} environment)
         run: |
-          echo "environment: ${{ env.ENVIRONMENT_NAME }}"
+          echo "environment: ${{ env.ENVIRONMENT_NAME_DEMO }}"
           echo "running 'terraform apply'..."
