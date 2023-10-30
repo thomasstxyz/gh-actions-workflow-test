@@ -8,33 +8,47 @@ on:
   pull_request:
     branches: ["main"]
 
-env:
-  ENVIRONMENT_NAME_DEMO: demo
-  ENVIRONMENT_NAME_PROD: prod
-
 jobs:
   plan_deploy_to_demo_environment:
-    name: "Plan Terraform deployment (demo env)"  # "${{ env.ENVIRONMENT_NAME_DEMO }}"
+    name: "[demo] Plan Terraform deployment"
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
-      - name: "Terraform plan (${{ env.ENVIRONMENT_NAME_DEMO }} environment)"
+      - name: "Terraform plan (demo environment)"
         run: |
-          echo "environment: ${{ env.ENVIRONMENT_NAME_DEMO }}"
+          echo "environment: demo"
           echo "running 'terraform plan'..."
-
-
   deploy_to_demo_environment:
     if: github.event_name == 'release'
-    name: "Apply Terraform deployment (demo env)"  # "${{ env.ENVIRONMENT_NAME_DEMO }}"
+    name: "[demo] Apply Terraform deployment"
     runs-on: ubuntu-latest
-    environment: demo  # "${{ env.ENVIRONMENT_NAME_DEMO }}"
+    environment: demo
+    steps:
+      - uses: actions/checkout@v3
+      - name: "Terraform apply (demo environment)"
+        run: |
+          echo "environment: demo"
+          echo "running 'terraform apply'..."
+
+
+  plan_deploy_to_prod_environment:
+    name: "[prod] Plan Terraform deployment"
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: "Terraform apply (${{ env.ENVIRONMENT_NAME_DEMO }} environment)"
+      - name: "Terraform plan (prod environment)"
         run: |
-          echo "environment: ${{ env.ENVIRONMENT_NAME_DEMO }}"
+          echo "environment: prod"
+          echo "running 'terraform plan'..."
+  deploy_to_prod_environment:
+    if: github.event_name == 'release'
+    name: "[prod] Apply Terraform deployment"
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - uses: actions/checkout@v3
+      - name: "Terraform apply (prod environment)"
+        run: |
+          echo "environment: prod"
           echo "running 'terraform apply'..."
