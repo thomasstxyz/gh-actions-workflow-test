@@ -18,3 +18,4 @@ jobs:
           release-type: node
           package-name: package1
           token: ${{secrets.GITHUB_TOKEN}}
+ 
