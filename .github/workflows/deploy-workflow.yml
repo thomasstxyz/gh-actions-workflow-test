@@ -22,7 +22,7 @@ on:
 jobs:
   terraform:
     name: "Run Terraform"
-    if: github.event.inputs.apply == 'false'
+    if: ${{ inputs.apply }} == 'false'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -37,7 +37,7 @@ jobs:
 
   terraform_apply:
     name: "Run Terraform"
-    if: github.event.inputs.apply == 'true'
+    if: ${{ inputs.apply }} == 'true'
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     steps:
@@ -51,12 +51,12 @@ jobs:
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform plan'..."
       - name: "Terraform apply"
-        if: github.event.inputs.apply == 'true' && github.event.inputs.action == 'apply'
+        if: ${{ inputs.apply }} == 'true' && github.event.inputs.action == 'apply'
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform apply'..."
       - name: "Terraform destroy"
-        if: github.event.inputs.apply == 'true' && github.event.inputs.action == 'destroy'
+        if: ${{ inputs.apply }} == 'true' && github.event.inputs.action == 'destroy'
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform destroy'..."
