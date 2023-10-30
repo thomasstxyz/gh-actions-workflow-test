@@ -23,6 +23,27 @@ jobs:
   terraform:
     name: "Run Terraform"
     runs-on: ubuntu-latest
+    env:
+      env_name: "${{ inputs.environment }}"
+    environment: "${{ env.env_name }}"
+    steps:
+      - uses: actions/checkout@v3
+      - name: "Terraform validate"
+        run: |
+          echo "environment: ${{ inputs.environment }}"
+          echo "running 'terraform validate'..."
+      - name: "Terraform plan"
+        run: |
+          echo "environment: ${{ inputs.environment }}"
+          echo "running 'terraform plan'..."
+
+  terraform_apply:
+    name: "Run Terraform"
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    env:
+      env_name: "${{ inputs.environment }}"
+    environment: "${{ env.env_name }}"
     steps:
       - uses: actions/checkout@v3
       - name: "Terraform validate"
