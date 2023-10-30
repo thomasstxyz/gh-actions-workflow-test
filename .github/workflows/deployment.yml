@@ -14,7 +14,7 @@ env:
 
 jobs:
   plan_deploy_to_demo_environment:
-    name: "Plan Terraform deployment (${{ env.ENVIRONMENT_NAME_DEMO }} env)"
+    name: "Plan Terraform deployment (demo env)"  # "${{ env.ENVIRONMENT_NAME_DEMO }}"
     runs-on: ubuntu-latest
 
     steps:
