@@ -10,6 +10,7 @@ on:
 
 jobs:
   plan_deploy_to_demo_environment:
+    if: github.event_name != 'release'
     name: "[demo] Plan Terraform deployment"
     uses: ./.github/workflows/deploy-workflow.yml
     with:
@@ -29,6 +30,7 @@ jobs:
     secrets: inherit
 
   plan_deploy_to_prod_environment:
+    if: github.event_name != 'release'
     name: "[prod] Plan Terraform deployment"
     uses: ./.github/workflows/deploy-workflow.yml
     with:
