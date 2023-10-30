@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.8.0...v1.9.0) (2023-10-30)
+
+
+### Features
+
+* **demo:** add validate terraform ([157e9fa](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/157e9fa42037e5f4313079c0307f17ee13cbc5c1))
+
 ## [1.8.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.7.0...v1.8.0) (2023-10-30)
 
 
