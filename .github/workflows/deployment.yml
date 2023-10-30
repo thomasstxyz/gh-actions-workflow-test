@@ -19,7 +19,7 @@ jobs:
 
       - name: Terraform plan (demo environment)
         run: |
-          echo "environment: ${{ env.ENVIRONMENT_NAME }}"
+          echo "environment: demo"
           echo "running 'terraform plan'..."
 
 
