@@ -37,7 +37,7 @@ jobs:
 
   terraform_apply:
     name: "Run Terraform"
-    if: ${{ inputs.apply }} == 'true'
+    if: github.event_name == 'release' && ${{ inputs.apply }} == 'true'
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     steps:
