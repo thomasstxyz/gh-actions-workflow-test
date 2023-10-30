@@ -11,7 +11,7 @@ on:
 jobs:
   plan_deploy_to_demo_environment:
     if: github.event_name != 'release'
-    name: "[demo] Plan Terraform deployment"
+    name: "[demo] Dry-run Terraform deployment"
     uses: ./.github/workflows/deploy-workflow.yml
     with:
       environment: demo
@@ -31,7 +31,7 @@ jobs:
 
   plan_deploy_to_prod_environment:
     if: github.event_name != 'release'
-    name: "[prod] Plan Terraform deployment"
+    name: "[prod] Dry-run Terraform deployment"
     uses: ./.github/workflows/deploy-workflow.yml
     with:
       environment: prod
