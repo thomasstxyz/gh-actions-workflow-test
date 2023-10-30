@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.4.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.3.0...v1.4.0) (2023-10-30)
+
+
+### Features
+
+* blalbub ([cdc5aaa](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/cdc5aaa7e4bf43600824d3b23613f7179c763a6a))
+
+
+### Bug Fixes
+
+* aaaahha ([2d01a6d](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/2d01a6df560b9ddf39d62e078c55a53fff2472a2))
+* blaarrr ([c3dd157](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/c3dd157d3b750b1644cf96ceb4f9da6584ec3e16))
+* blub ([6ff432b](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/6ff432b6ea5d588d0ae2de28440db577022a0da3))
+* quoting syntax? ([ff82224](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/ff82224233ea2c6438e5108cf04995b107129572))
+
 ## [1.3.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.2.0...v1.3.0) (2023-10-30)
 
 
