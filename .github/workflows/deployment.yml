@@ -27,7 +27,7 @@ jobs:
 
   deploy_to_demo_environment:
     if: github.event_name == 'release'
-    name: "Apply Terraform deployment (${{ env.ENVIRONMENT_NAME_DEMO }} env)"
+    name: "Apply Terraform deployment (demo env)"  # "${{ env.ENVIRONMENT_NAME_DEMO }}"
     runs-on: ubuntu-latest
     environment: demo  # "${{ env.ENVIRONMENT_NAME_DEMO }}"
 
