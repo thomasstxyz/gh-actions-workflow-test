@@ -14,11 +14,11 @@ env:
 
 jobs:
   plan_deploy_to_demo_environment:
+    name: "Plan Terraform deployment (${{ env.ENVIRONMENT_NAME_DEMO }} env)"
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-
       - name: "Terraform plan (${{ env.ENVIRONMENT_NAME_DEMO }} environment)"
         run: |
           echo "environment: ${{ env.ENVIRONMENT_NAME_DEMO }}"
@@ -27,9 +27,8 @@ jobs:
 
   deploy_to_demo_environment:
     if: github.event_name == 'release'
-
+    name: "Apply Terraform deployment (${{ env.ENVIRONMENT_NAME_DEMO }} env)"
     runs-on: ubuntu-latest
-
     environment: demo  # "${{ env.ENVIRONMENT_NAME_DEMO }}"
 
     steps:
