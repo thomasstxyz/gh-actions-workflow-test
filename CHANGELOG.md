@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.4.0...v1.5.0) (2023-10-30)
+
+
+### Features
+
+* add name to ci job ([e29d2cd](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/e29d2cd00eda2b7ebda6b93058abe19f1870da83))
+
+
+### Bug Fixes
+
+* -bla ([72965da](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/72965dae446b294a8e84439ec82a19ed8a85fa41))
+* fu ([0e00ecf](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/0e00ecfe1b0b14824d10cffac04686946eb19fa8))
+
 ## [1.4.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.3.0...v1.4.0) (2023-10-30)
 
 
