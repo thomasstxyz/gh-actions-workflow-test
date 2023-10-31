@@ -20,26 +20,31 @@ runs:
   steps:
     - uses: actions/checkout@v3
     - name: "Terraform validate"
+      shell: bash
       run: |
         echo "environment: ${{ inputs.environment }}"
         echo "running 'terraform validate'..."
     - name: "Terraform plan"
       if: inputs.action == 'apply'
+      shell: bash
       run: |
         echo "environment: ${{ inputs.environment }}"
         echo "running 'terraform plan'..."
     - name: "Terraform plan -destroy"
       if: inputs.action == 'destroy'
+      shell: bash
       run: |
         echo "environment: ${{ inputs.environment }}"
         echo "running 'terraform plan -destroy'..."
     - name: "Terraform apply"
       if: inputs.apply == true && inputs.action == 'apply'
+      shell: bash
       run: |
         echo "environment: ${{ inputs.environment }}"
         echo "running 'terraform apply'..."
     - name: "Terraform destroy"
       if: inputs.apply == true && inputs.action == 'destroy'
+      shell: bash
       run: |
         echo "environment: ${{ inputs.environment }}"
         echo "running 'terraform destroy'..."
