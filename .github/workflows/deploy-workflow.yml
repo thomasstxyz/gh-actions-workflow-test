@@ -64,7 +64,7 @@ jobs:
         if: github.event.inputs.action == 'destroy'
         run: |
           echo "environment: ${{ inputs.environment }}"
-          echo "running 'terraform plan -destroy"'..."
+          echo "running 'terraform plan -destroy'..."
 
   terraform_apply:
     name: "Apply Terraform"
