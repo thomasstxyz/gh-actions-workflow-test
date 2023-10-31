@@ -45,11 +45,6 @@ on:
         default: false
 
 jobs:
-  # debug:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: debug
-  #       run: echo ${{ github.event_name }}
   terraform:
     name: "Dry-run Terraform"
     if: inputs.apply == false || (github.event_name == 'release' && inputs.apply == true)
@@ -61,9 +56,15 @@ jobs:
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform validate'..."
       - name: "Terraform plan"
+        if: github.event.inputs.action == 'apply'
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform plan'..."
+      - name: "Terraform plan -destroy"
+        if: github.event.inputs.action == 'destroy'
+        run: |
+          echo "environment: ${{ inputs.environment }}"
+          echo "running 'terraform plan -destroy"'..."
 
   terraform_apply:
     name: "Apply Terraform"
