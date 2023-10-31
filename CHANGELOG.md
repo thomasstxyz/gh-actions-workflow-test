@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.23.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.23.1...v1.23.2) (2023-10-31)
+
+
+### Bug Fixes
+
+* apply_prod ([399ce60](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/399ce6026a7aa87aed74f2d758db40bbe3189d6e))
+
 ## [1.23.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.23.0...v1.23.1) (2023-10-31)
 
 
