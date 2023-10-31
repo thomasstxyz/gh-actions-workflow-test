@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.20.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.19.0...v1.20.0) (2023-10-31)
+
+
+### Features
+
+* add concurrency ([f457aae](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/f457aae018f43018d33bab8c16bd9f6845d0c3cb))
+* ask for approval on manual trigger, if env is critical ([5717f5d](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/5717f5d2edd731af4d0a2005bdc4dc3e0a8ec096))
+
+
+### Bug Fixes
+
+* .. ([edb0858](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/edb08587aefcd117a55df5e8a32d1aa2028c4969))
+
 ## [1.19.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.18.0...v1.19.0) (2023-10-31)
 
 
