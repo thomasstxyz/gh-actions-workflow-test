@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.17.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.16.2...v1.17.0) (2023-10-31)
+
+
+### Features
+
+* create action for terraform steps ([f6af1b6](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/f6af1b657decdac44e204967e62193aa9bd426ec))
+
+
+### Bug Fixes
+
+* action syntax ([394beb4](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/394beb40186061e477ab52d6fbcca8517d3f2f7d))
+* actions path syntax ([e0c18fc](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/e0c18fc83c48b95ccb61c13402e812139807375e))
+* add 'shell' key to step in action ([3e3974d](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/3e3974d87cf46398e601170cac0a207eb18a5457))
+
 ## [1.16.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.16.1...v1.16.2) (2023-10-31)
 
 
