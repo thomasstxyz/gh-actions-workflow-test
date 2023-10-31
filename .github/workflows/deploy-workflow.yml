@@ -46,20 +46,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: "Terraform validate"
-        run: |
-          echo "environment: ${{ inputs.environment }}"
-          echo "running 'terraform validate'..."
-      - name: "Terraform plan"
-        if: inputs.action == 'apply'
-        run: |
-          echo "environment: ${{ inputs.environment }}"
-          echo "running 'terraform plan'..."
-      - name: "Terraform plan -destroy"
-        if: inputs.action == 'destroy'
-        run: |
-          echo "environment: ${{ inputs.environment }}"
-          echo "running 'terraform plan -destroy'..."
+      - name: "Dry-run Terraform"
+        uses: "./.github/actions/terraform.yml"
+        with:
+          environment: ${{ inputs.environment }}
+          action: ${{ inputs.action }}
+          apply: ${{ inputs.apply }}
 
   terraform_apply:
     name: "Apply Terraform"
@@ -68,27 +60,9 @@ jobs:
     environment: ${{ inputs.environment }}
     steps:
       - uses: actions/checkout@v3
-      - name: "Terraform validate"
-        run: |
-          echo "environment: ${{ inputs.environment }}"
-          echo "running 'terraform validate'..."
-      - name: "Terraform plan"
-        if: inputs.action == 'apply'
-        run: |
-          echo "environment: ${{ inputs.environment }}"
-          echo "running 'terraform plan'..."
-      - name: "Terraform plan -destroy"
-        if: inputs.action == 'destroy'
-        run: |
-          echo "environment: ${{ inputs.environment }}"
-          echo "running 'terraform plan -destroy'..."
-      - name: "Terraform apply"
-        if: inputs.apply == true && inputs.action == 'apply'
-        run: |
-          echo "environment: ${{ inputs.environment }}"
-          echo "running 'terraform apply'..."
-      - name: "Terraform destroy"
-        if: inputs.apply == true && inputs.action == 'destroy'
-        run: |
-          echo "environment: ${{ inputs.environment }}"
-          echo "running 'terraform destroy'..."
+      - name: "Apply Terraform"
+        uses: "./.github/actions/terraform.yml"
+        with:
+          environment: ${{ inputs.environment }}
+          action: ${{ inputs.action }}
+          apply: ${{ inputs.apply }}
