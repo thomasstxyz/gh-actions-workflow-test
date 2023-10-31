@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.24.0...v1.25.0) (2023-10-31)
+
+
+### Features
+
+* blsdf ([01f597f](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/01f597f4b79a70b05a888ebbaacce471bf9a487c))
+
 ## [1.24.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.23.2...v1.24.0) (2023-10-31)
 
 
