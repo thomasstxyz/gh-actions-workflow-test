@@ -24,8 +24,21 @@ on:
 
 jobs:
   terraform:
+    if: ${{ ! contains(fromJSON('["demo", "prod"]'), inputs.environment) }}
     name: "Run Terraform"
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: "./.github/actions/terraform"
+        with:
+          environment: ${{ inputs.environment }}
+          action: ${{ inputs.action }}
+          apply: ${{ inputs.apply }}
+  terraform_with_approval:
+    if: ${{ contains(fromJSON('["demo", "prod"]'), inputs.environment) }}
+    name: "Run Terraform"
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
     steps:
       - uses: actions/checkout@v3
       - uses: "./.github/actions/terraform"
