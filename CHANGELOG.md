@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.26.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.26.0...v1.26.1) (2023-10-31)
+
+
+### Bug Fixes
+
+* alsdjf ([365bdf4](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/365bdf4f7f1401dc808f89c9b467740482001893))
+
 ## [1.26.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.25.1...v1.26.0) (2023-10-31)
 
 
