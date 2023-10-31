@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.15.0...v1.16.0) (2023-10-31)
+
+
+### Features
+
+* my feature4 ([aa6d1eb](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/aa6d1eb8fd3e94d6eab04e7eac9bcf2b204741e0))
+
 ## [1.15.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.14.0...v1.15.0) (2023-10-31)
 
 
