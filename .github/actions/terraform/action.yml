@@ -1,0 +1,50 @@
+name: 'Terraform'
+description: 'Run Terraform'
+
+inputs:
+  environment:
+    description: 'Environment which should be started/stopped'
+    required: true
+    default: "lab"
+  action:
+    description: 'Action to be taken'
+    required: true
+    default: "apply"
+  apply:
+    description: 'Apply the configuration?'
+    required: true
+    default: false
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v3
+    - name: "Terraform validate"
+      shell: bash
+      run: |
+        echo "environment: ${{ inputs.environment }}"
+        echo "running 'terraform validate'..."
+    - name: "Terraform plan"
+      if: inputs.action == 'apply'
+      shell: bash
+      run: |
+        echo "environment: ${{ inputs.environment }}"
+        echo "running 'terraform plan'..."
+    - name: "Terraform plan -destroy"
+      if: inputs.action == 'destroy'
+      shell: bash
+      run: |
+        echo "environment: ${{ inputs.environment }}"
+        echo "running 'terraform plan -destroy'..."
+    - name: "Terraform apply"
+      if: inputs.apply == true && inputs.action == 'apply'
+      shell: bash
+      run: |
+        echo "environment: ${{ inputs.environment }}"
+        echo "running 'terraform apply'..."
+    - name: "Terraform destroy"
+      if: inputs.apply == true && inputs.action == 'destroy'
+      shell: bash
+      run: |
+        echo "environment: ${{ inputs.environment }}"
+        echo "running 'terraform destroy'..."
