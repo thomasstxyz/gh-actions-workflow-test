@@ -24,12 +24,7 @@ on:
         description: 'Environment which should be started/stopped'
         required: true
         default: "lab"
-        type: choice
-        options:
-          - "lab"
-          - "dev"
-          - "demo"
-          - "prod"
+        type: environment
       action:
         description: 'Action to be taken'
         required: true
