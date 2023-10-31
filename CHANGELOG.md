@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.21.0...v1.22.0) (2023-10-31)
+
+
+### Features
+
+* add terraform_plan job ([4821f68](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/4821f68177b22263b02988c141d40e9d789b2567))
+
 ## [1.21.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.20.0...v1.21.0) (2023-10-31)
 
 
