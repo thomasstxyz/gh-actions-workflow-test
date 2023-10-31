@@ -55,17 +55,13 @@ jobs:
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform validate'..."
-      - name: debug
-        run: |
-          echo ${{ github.event.inputs.action }}
-          echo ${{ inputs.action }}
       - name: "Terraform plan"
-        if: github.event.inputs.action == 'apply'
+        if: inputs.action == 'apply'
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform plan'..."
       - name: "Terraform plan -destroy"
-        if: github.event.inputs.action == 'destroy'
+        if: inputs.action == 'destroy'
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform plan -destroy'..."
@@ -82,22 +78,22 @@ jobs:
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform validate'..."
       - name: "Terraform plan"
-        if: github.event.inputs.action == 'apply'
+        if: inputs.action == 'apply'
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform plan'..."
       - name: "Terraform plan -destroy"
-        if: github.event.inputs.action == 'destroy'
+        if: inputs.action == 'destroy'
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform plan -destroy'..."
       - name: "Terraform apply"
-        if: inputs.apply == true && github.event.inputs.action == 'apply'
+        if: inputs.apply == true && inputs.action == 'apply'
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform apply'..."
       - name: "Terraform destroy"
-        if: inputs.apply == true && github.event.inputs.action == 'destroy'
+        if: inputs.apply == true && inputs.action == 'destroy'
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform destroy'..."
