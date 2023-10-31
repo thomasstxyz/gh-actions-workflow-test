@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.23.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.23.0...v1.23.1) (2023-10-31)
+
+
+### Bug Fixes
+
+* try release-please pipeline with default.. ([a4cc9a8](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/a4cc9a878baf2d9afa108fb8c877444bbce2b340))
+* try release-please pipeline with default.. ([fa0f3a4](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/fa0f3a41781e6f2e8635aa546180716a4ea872c6))
+
 ## [1.23.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.22.1...v1.23.0) (2023-10-31)
 
 
