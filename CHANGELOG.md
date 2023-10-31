@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.21.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.20.0...v1.21.0) (2023-10-31)
+
+
+### Features
+
+* add run-name to manual workflow trigger ([98e4eca](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/98e4eca8e6fbe6013d1526f6c30d6655b587e0db))
+
+
+### Bug Fixes
+
+* description of job ([97ffc85](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/97ffc853cc0655562a680595216a92821c7e0117))
+
 ## [1.20.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.19.0...v1.20.0) (2023-10-31)
 
 
