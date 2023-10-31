@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.17.0...v1.18.0) (2023-10-31)
+
+
+### Features
+
+* change github token for release-please ([9f8c211](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/9f8c2114629f90e3f08bf8fbc8fa0aea845357ad))
+
 ## [1.17.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.16.2...v1.17.0) (2023-10-31)
 
 
