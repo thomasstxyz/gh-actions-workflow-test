@@ -27,7 +27,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
   terraform_dryrun_demo:
-    name: "[dry-run] ${{ inputs.action }} ${{ inputs.environment }} environment"
+    name: "[dry-run] apply demo environment"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -38,7 +38,7 @@ jobs:
           apply: false
 
   terraform_apply_demo:
-    name: "${{ inputs.action }} ${{ inputs.environment }} environment"
+    name: "apply demo environment"
     needs:
       - terraform_dryrun_demo
       - release-please
@@ -56,7 +56,7 @@ jobs:
           apply: true
 
   terraform_dryrun_prod:
-    name: "[dry-run] ${{ inputs.action }} ${{ inputs.environment }} environment"
+    name: "[dry-run] apply prod environment"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -67,7 +67,7 @@ jobs:
           apply: false
 
   terraform_apply_prod:
-    name: "${{ inputs.action }} ${{ inputs.environment }} environment"
+    name: "apply prod environment"
     needs:
       - terraform_apply_demo
       - terraform_dryrun_prod
