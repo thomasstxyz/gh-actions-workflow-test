@@ -60,7 +60,7 @@ jobs:
           echo ${{ github.event.inputs.action }}
           echo ${{ inputs.action }}
       - name: "Terraform plan"
-        if: github.event.inputs.action == 'apply'
+        if: github.event.inputs.action == apply
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform plan'..."
