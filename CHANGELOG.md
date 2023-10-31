@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.14.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.13.1...v1.14.0) (2023-10-31)
+
+
+### Features
+
+* add workflow_dispatch manual trigger ([5366e54](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/5366e541441029bd40b8b9f63daaeef53286ebec))
+* myfeature3 ([88bf9c0](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/88bf9c0c6acb07d0016dd2a072ae2493a8e51347))
+
+
+### Bug Fixes
+
+* blaaadf ([5f6c191](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/5f6c1912c93c1c68079b56388f9e60eeb4198f9d))
+* bladf ([3e2fd26](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/3e2fd26a0525824c27b2a8307af6727f5bbb2f42))
+* bool vs string ([e2a4369](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/e2a43694369674b0378bf5398cb82d987ae87593))
+* dry-run destroy plan ([372f2c0](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/372f2c0fb6bd3aa0356a83c062266ff8fcd96e8b))
+* if workflow_dispatch ([cdcedaf](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/cdcedafe791a8ea55604f8f8d93f0a784032f8bd))
+* inputs.action != github.event.inputs.action ([da2114b](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/da2114b825641410c6744de6d105483262e0811b))
+* no way ([6e4644d](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/6e4644df8aa0ee8ea1e3592060ad64e91a1ae4a8))
+* syntax ([db2c4b5](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/db2c4b5bea491edb9edb18bab0f94c71211762ac))
+* syntax ([cacd9ac](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/cacd9ac52cfb783b89e324bdfd52352746fb70f3))
+
 ## [1.13.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.13.0...v1.13.1) (2023-10-30)
 
 
