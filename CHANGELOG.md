@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.19.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.18.0...v1.19.0) (2023-10-31)
+
+
+### Features
+
+* blabla ([2aada28](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/2aada2891334be4c68d04779fc5e26739163195f))
+* my feat ([8a07149](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/8a07149e6dcc03a639bdb7e516736d152688c391))
+
 ## [1.18.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.17.0...v1.18.0) (2023-10-31)
 
 
