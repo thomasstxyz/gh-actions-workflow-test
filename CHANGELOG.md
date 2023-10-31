@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.22.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.22.0...v1.22.1) (2023-10-31)
+
+
+### Bug Fixes
+
+* add shell to defaults ([3fb1401](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/3fb1401df9e48a36663133e734cd69694670cec5))
+* Update README.md ([91d2456](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/91d2456c21096f18d7952c5afa793a2a3db69173))
+
 ## [1.22.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.21.0...v1.22.0) (2023-10-31)
 
 
