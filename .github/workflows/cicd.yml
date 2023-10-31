@@ -57,6 +57,9 @@ jobs:
 
   terraform_dryrun_prod:
     name: "[dry-run] apply prod environment"
+    needs:
+      - terraform_dryrun_demo
+      - terraform_apply_demo
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
