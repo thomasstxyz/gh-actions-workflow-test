@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.15.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.14.0...v1.15.0) (2023-10-31)
+
+
+### Features
+
+* needs: deploy_demo ([b47976b](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/b47976bfe2678623e5f5951d060f04480a110be4))
+
+
+### Bug Fixes
+
+* needs: deploy_to_demo_environment ([df954f0](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/df954f08d204e59fd42ca919d69e551900170799))
+
 ## [1.14.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.13.1...v1.14.0) (2023-10-31)
 
 
