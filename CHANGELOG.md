@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.25.0...v1.25.1) (2023-10-31)
+
+
+### Bug Fixes
+
+* vars nam ([c2ba0e1](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/c2ba0e11f1f6d4a31761bf003679b75a2ca1d2dc))
+
 ## [1.25.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.24.0...v1.25.0) (2023-10-31)
 
 
