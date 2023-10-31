@@ -17,4 +17,5 @@ jobs:
         with:
           release-type: node
           package-name: package1
-          token: ${{secrets.GH_PAT}}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # token: ${{secrets.GH_PAT}}
