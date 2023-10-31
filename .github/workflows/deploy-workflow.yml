@@ -47,7 +47,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: "Dry-run Terraform"
-        uses: "./.github/actions/terraform.yml"
+        uses: "./.github/actions/terraform"
         with:
           environment: ${{ inputs.environment }}
           action: ${{ inputs.action }}
@@ -61,7 +61,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: "Apply Terraform"
-        uses: "./.github/actions/terraform.yml"
+        uses: "./.github/actions/terraform"
         with:
           environment: ${{ inputs.environment }}
           action: ${{ inputs.action }}
