@@ -67,7 +67,7 @@ jobs:
 
   terraform_apply:
     name: "Apply Terraform"
-    if: inputs.apply == true && (github.event_name == 'release' || github.event_name == ''workflow_dispatch')
+    if: inputs.apply == true && (github.event_name == 'release' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     steps:
