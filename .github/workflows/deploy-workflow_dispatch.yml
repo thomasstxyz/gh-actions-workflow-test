@@ -1,0 +1,35 @@
+name: Dispatch Terraform - apply/destroy
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment which should be started/stopped'
+        required: true
+        default: "lab"
+        type: environment
+      action:
+        description: 'Action to be taken'
+        required: true
+        default: "apply"
+        type: choice
+        options:
+          - "apply"
+          - "destroy"
+      apply:
+        type: boolean
+        description: 'Apply the configuration?'
+        required: true
+        default: false
+
+jobs:
+  terraform:
+    name: "Run Terraform"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: "./.github/actions/terraform"
+        with:
+          environment: ${{ inputs.environment }}
+          action: ${{ inputs.action }}
+          apply: ${{ inputs.apply }}
