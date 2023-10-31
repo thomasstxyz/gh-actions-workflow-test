@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.23.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.22.1...v1.23.0) (2023-10-31)
+
+
+### Features
+
+* try release-please pipeline with default token ([cb5eba5](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/cb5eba51d5b1975345df82d1523052c33c35e6f0))
+
 ## [1.22.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.22.0...v1.22.1) (2023-10-31)
 
 
