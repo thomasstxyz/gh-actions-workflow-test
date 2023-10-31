@@ -22,6 +22,9 @@ on:
         required: true
         default: false
 
+concurrency:
+  group: ${{ inputs.environment }}
+
 jobs:
   terraform:
     if: ${{ (!contains(fromJSON('["demo", "prod"]'), inputs.environment) && inputs.apply == true) }}
