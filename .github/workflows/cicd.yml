@@ -11,10 +11,14 @@ on:
 jobs:
   release-please:
     if: github.event_name == 'push'
+    id: release
     permissions:
       contents: write
       pull-requests: write
     runs-on: ubuntu-latest
+    outputs:
+      releases_created: ${{ steps.release.outputs.releases_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
     steps:
       - uses: google-github-actions/release-please-action@v3
         with:
