@@ -81,12 +81,12 @@ jobs:
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform plan'..."
       - name: "Terraform apply"
-        if: inputs.apply == 'true' && github.event.inputs.action == 'apply'
+        if: inputs.apply == true && github.event.inputs.action == 'apply'
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform apply'..."
       - name: "Terraform destroy"
-        if: inputs.apply == 'true' && github.event.inputs.action == 'destroy'
+        if: inputs.apply == true && github.event.inputs.action == 'destroy'
         run: |
           echo "environment: ${{ inputs.environment }}"
           echo "running 'terraform destroy'..."
