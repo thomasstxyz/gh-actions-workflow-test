@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.27.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.26.1...v1.27.0) (2023-10-31)
+
+
+### Features
+
+* add needs deps to dryrun_prod ([576850d](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/576850da9570b51cc1a174c6763221aaf8e91897))
+* reorder jobs ([cd6eaf4](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/cd6eaf453e7e520417254c7adec01b6dfdde4c08))
+
+
+### Bug Fixes
+
+* remove needs dep ([395182a](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/395182a2f374dfea4c155deb23f2c0ed3730ebf5))
+* reorder ([b82470e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/b82470ec221b669f03c6c69628f5ecaee3f83f8e))
+
 ## [1.26.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.26.0...v1.26.1) (2023-10-31)
 
 
