@@ -1,4 +1,5 @@
 name: Dispatch Terraform - apply/destroy
+run-name: "${{ inputs.action }} ${{ inputs.environment }} environment by @${{ github.actor }}"
 
 on:
   workflow_dispatch:
