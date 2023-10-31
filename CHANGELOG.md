@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.26.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.25.1...v1.26.0) (2023-10-31)
+
+
+### Features
+
+* add on push tags v* ([cc7b6b3](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/cc7b6b32a54755c7d52d158cf91fc06d0549134b))
+
 ## [1.25.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.25.0...v1.25.1) (2023-10-31)
 
 
