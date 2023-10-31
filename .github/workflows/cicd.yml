@@ -71,7 +71,8 @@ jobs:
     needs:
       - terraform_apply_demo
       - terraform_dryrun_prod
-    if: github.event_name == 'release'
+      - release-please
+    if: needs.release-please.outputs.releases_created == 'true'
     runs-on: ubuntu-latest
     environment: prod
     concurrency:
