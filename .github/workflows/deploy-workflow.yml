@@ -1,6 +1,23 @@
 name: Reusable deploy workflow
 
 on:
+  workflow_call:
+    inputs:
+      environment:
+        description: 'Environment which should be started/stopped'
+        required: true
+        default: "lab"
+        type: string
+      action:
+        description: 'Action to be taken'
+        required: true
+        default: "apply"
+        type: string
+      apply:
+        type: boolean
+        description: 'Apply the configuration?'
+        required: true
+        default: false
   workflow_dispatch:
     inputs:
       environment:
@@ -21,23 +38,6 @@ on:
         options:
           - "apply"
           - "destroy"
-      apply:
-        type: boolean
-        description: 'Apply the configuration?'
-        required: true
-        default: false
-  workflow_call:
-    inputs:
-      environment:
-        description: 'Environment which should be started/stopped'
-        required: true
-        default: "lab"
-        type: string
-      action:
-        description: 'Action to be taken'
-        required: true
-        default: "apply"
-        type: string
       apply:
         type: boolean
         description: 'Apply the configuration?'
