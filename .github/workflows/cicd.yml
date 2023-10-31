@@ -20,7 +20,7 @@ jobs:
         with:
           release-type: node
           package-name: package1
-          token: ${{secrets.GH_PAT}}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   terraform_dryrun_demo:
     name: "[demo] Dry-run Terraform deployment"
@@ -35,8 +35,10 @@ jobs:
 
   terraform_apply_demo:
     name: "[demo] Apply Terraform deployment"
-    needs: terraform_dryrun_demo
-    if: github.event_name == 'release'
+    needs:
+      - terraform_dryrun_demo
+      - release-please
+    if: needs.release-please.outputs.releases_created == 'true'
     runs-on: ubuntu-latest
     environment: demo
     concurrency:
