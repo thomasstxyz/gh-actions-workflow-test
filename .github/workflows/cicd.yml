@@ -9,6 +9,17 @@ on:
     branches: ["main"]
 
 jobs:
+  terraform_dryrun_demo:
+    name: "[dry-run] apply demo environment"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: "./.github/actions/terraform"
+        with:
+          environment: demo
+          action: apply
+          apply: false
+
   release-please:
     if: github.event_name == 'push'
     permissions:
@@ -25,17 +36,6 @@ jobs:
           release-type: node
           package-name: package1
           token: ${{ secrets.GITHUB_TOKEN }}
-
-  terraform_dryrun_demo:
-    name: "[dry-run] apply demo environment"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: "./.github/actions/terraform"
-        with:
-          environment: demo
-          action: apply
-          apply: false
 
   terraform_apply_demo:
     name: "apply demo environment"
@@ -58,7 +58,6 @@ jobs:
   terraform_dryrun_prod:
     name: "[dry-run] apply prod environment"
     needs:
-      - terraform_dryrun_demo
       - terraform_apply_demo
     runs-on: ubuntu-latest
     steps:
