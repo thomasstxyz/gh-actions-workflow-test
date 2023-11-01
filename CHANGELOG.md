@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.30.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.29.0...v1.30.0) (2023-11-01)
+
+
+### Features
+
+* implement strategy.matrix for tf plan ([b3edbde](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/b3edbde9a35f9c8272f162d1bd630af53914cf2f))
+
 ## [1.29.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.28.2...v1.29.0) (2023-11-01)
 
 
