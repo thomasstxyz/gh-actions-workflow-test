@@ -14,10 +14,10 @@ inputs:
     description: 'Apply the configuration?'
     required: true
     default: false
-  exoscale_api_key:
+  TF_VAR_EXOSCALE_API_KEY:
     description: "Exoscale API Key"
     required: true
-  exoscale_api_secret:
+  TF_VAR_EXOSCALE_API_SECRET:
     description: "Exoscale API Secret"
     required: true
 
@@ -29,10 +29,10 @@ runs:
     - name: Export environment variables
       shell: bash
       run: |
-        TF_VAR_EXOSCALE_API_KEY="${{ inputs.exoscale_api_key }}"
+        TF_VAR_EXOSCALE_API_KEY="${{ inputs.TF_VAR_EXOSCALE_API_KEY }}"
         echo "TF_VAR_EXOSCALE_API_KEY=${TF_VAR_EXOSCALE_API_KEY}" >> $GITHUB_ENV
 
-        TF_VAR_EXOSCALE_API_SECRET="${{ inputs.exoscale_api_secret }}"
+        TF_VAR_EXOSCALE_API_SECRET="${{ inputs.TF_VAR_EXOSCALE_API_SECRET }}"
         echo "TF_VAR_EXOSCALE_API_SECRET=${TF_VAR_EXOSCALE_API_SECRET}" >> $GITHUB_ENV
 
     - name: Setup Terraform

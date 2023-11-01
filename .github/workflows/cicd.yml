@@ -49,8 +49,8 @@ jobs:
           environment: demo
           action: apply
           apply: false
-          exoscale_api_key: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
-          exoscale_api_secret: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
+          TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+          TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
   terraform_apply_demo:
     name: "apply demo environment"
@@ -69,8 +69,8 @@ jobs:
           environment: demo
           action: apply
           apply: true
-          exoscale_api_key: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
-          exoscale_api_secret: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
+          TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+          TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
   terraform_dryrun_prod:
     name: "[dry-run] apply prod environment"
@@ -82,8 +82,8 @@ jobs:
           environment: prod
           action: apply
           apply: false
-          exoscale_api_key: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
-          exoscale_api_secret: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
+          TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+          TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
   terraform_apply_prod:
     name: "apply prod environment"
@@ -103,5 +103,5 @@ jobs:
           environment: prod
           action: apply
           apply: true
-          exoscale_api_key: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
-          exoscale_api_secret: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
+          TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+          TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
