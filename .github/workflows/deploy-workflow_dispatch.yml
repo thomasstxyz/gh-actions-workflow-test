@@ -55,6 +55,8 @@ jobs:
 
   terraform_apply:
     if: inputs.apply == true
+    needs:
+      - terraform_plan
     name: "terraform ${{ inputs.action }} ${{ inputs.environment }} environment"
     environment: ${{ inputs.environment }}
     runs-on: ubuntu-latest
