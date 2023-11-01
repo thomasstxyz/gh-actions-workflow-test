@@ -8,6 +8,19 @@ on:
   pull_request:
     branches: ["main"]
 
+env:
+  TF_VAR_EXOSCALE_API_KEY: '${{ secrets.TF_VAR_EXOSCALE_API_KEY }}'
+  TF_VAR_EXOSCALE_API_SECRET: '${{ secrets.TF_VAR_EXOSCALE_API_SECRET }}'
+
+  # renovate: datasource=github-releases depName=exoscale/cli
+  EXO_CLI_VERSION: v1.74.4
+
+  # renovate: datasource=github-releases depName=hashicorp/terraform
+  TERRAFORM_VERSION: 1.5.7
+
+  # renovate: datasource=github-tags depName=kubernetes/kubectl
+  KUBECTL_VERSION: v1.21.2
+
 jobs:
   release-please:
     if: github.event_name == 'push'
@@ -36,6 +49,8 @@ jobs:
           environment: demo
           action: apply
           apply: false
+          exoscale_api_key: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+          exoscale_api_secret: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
   terraform_apply_demo:
     name: "apply demo environment"
@@ -54,6 +69,8 @@ jobs:
           environment: demo
           action: apply
           apply: true
+          exoscale_api_key: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+          exoscale_api_secret: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
   terraform_dryrun_prod:
     name: "[dry-run] apply prod environment"
@@ -65,6 +82,8 @@ jobs:
           environment: prod
           action: apply
           apply: false
+          exoscale_api_key: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+          exoscale_api_secret: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
   terraform_apply_prod:
     name: "apply prod environment"
@@ -84,3 +103,5 @@ jobs:
           environment: prod
           action: apply
           apply: true
+          exoscale_api_key: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+          exoscale_api_secret: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}

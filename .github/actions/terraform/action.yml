@@ -14,37 +14,86 @@ inputs:
     description: 'Apply the configuration?'
     required: true
     default: false
+  exoscale_api_key:
+    description: "Exoscale API Key"
+    required: true
+  exoscale_api_secret:
+    description: "Exoscale API Secret"
+    required: true
 
 runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v3
-    - name: "Terraform validate"
+
+    - name: Export environment variables
       shell: bash
       run: |
-        echo "environment: ${{ inputs.environment }}"
-        echo "running 'terraform validate'..."
+        TF_VAR_EXOSCALE_API_KEY="${{ inputs.exoscale_api_key }}"
+        echo "TF_VAR_EXOSCALE_API_KEY=${TF_VAR_EXOSCALE_API_KEY}" >> $GITHUB_ENV
+
+        TF_VAR_EXOSCALE_API_SECRET="${{ inputs.exoscale_api_secret }}"
+        echo "TF_VAR_EXOSCALE_API_SECRET=${TF_VAR_EXOSCALE_API_SECRET}" >> $GITHUB_ENV
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@a1502cd9e758c50496cc9ac5308c4843bcd56d36 # v3
+      with:
+        terraform_version: ${{ env.TERRAFORM_VERSION }}
+        terraform_wrapper: false
+
+    - name: Terraform Init
+      working-directory: ./terraform/line-infra
+      id: init
+      shell: bash
+      run: |
+        terraform init
+
+    # - name: select workspace
+    #   working-directory: ./terraform/line-infra
+    #   shell: bash
+    #   run: terraform workspace select ${{ inputs.environment }}
+
+    - name: terraform fmt
+      working-directory: ./terraform/line-infra
+      shell: bash
+      run: terraform fmt --recursive
+
+    - name: "Terraform validate"
+      working-directory: ./terraform/line-infra
+      shell: bash
+      run: terraform validate
+
+    - name: "debug"
+      shell: bash
+      run: |
+        pwd
+        ls -la
+
+    - name: "debug"
+      working-directory: ./terraform/line-infra
+      shell: bash
+      run: |
+        pwd
+        ls -la
+
     - name: "Terraform plan"
       if: inputs.action == 'apply'
+      working-directory: ./terraform/line-infra
       shell: bash
-      run: |
-        echo "environment: ${{ inputs.environment }}"
-        echo "running 'terraform plan'..."
+      run: terraform plan
     - name: "Terraform plan -destroy"
       if: inputs.action == 'destroy'
+      working-directory: ./terraform/line-infra
       shell: bash
-      run: |
-        echo "environment: ${{ inputs.environment }}"
-        echo "running 'terraform plan -destroy'..."
+      run: terraform plan -destroy
+
     - name: "Terraform apply"
       if: inputs.apply == true && inputs.action == 'apply'
+      working-directory: ./terraform/line-infra
       shell: bash
-      run: |
-        echo "environment: ${{ inputs.environment }}"
-        echo "running 'terraform apply'..."
+      run: terraform apply -auto-approve
     - name: "Terraform destroy"
       if: inputs.apply == true && inputs.action == 'destroy'
+      working-directory: ./terraform/line-infra
       shell: bash
-      run: |
-        echo "environment: ${{ inputs.environment }}"
-        echo "running 'terraform destroy'..."
+      run: terraform destroy -auto-approve
