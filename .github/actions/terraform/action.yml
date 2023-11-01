@@ -35,6 +35,9 @@ runs:
     - name: Terraform Init
       working-directory: ./terraform/line-infra
       id: init
+      env:
+        TF_VAR_EXOSCALE_API_KEY: ${{ inputs.exoscale_api_key }}
+        TF_VAR_EXOSCALE_API_SECRET: ${{ inputs.exoscale_api_secret }}
       shell: bash
       run: |
         terraform init
@@ -57,21 +60,33 @@ runs:
     - name: "Terraform plan"
       if: inputs.action == 'apply'
       working-directory: ./terraform/line-infra
+      env:
+        TF_VAR_EXOSCALE_API_KEY: ${{ inputs.exoscale_api_key }}
+        TF_VAR_EXOSCALE_API_SECRET: ${{ inputs.exoscale_api_secret }}
       shell: bash
       run: terraform plan
     - name: "Terraform plan -destroy"
       if: inputs.action == 'destroy'
       working-directory: ./terraform/line-infra
+      env:
+        TF_VAR_EXOSCALE_API_KEY: ${{ inputs.exoscale_api_key }}
+        TF_VAR_EXOSCALE_API_SECRET: ${{ inputs.exoscale_api_secret }}
       shell: bash
       run: terraform plan -destroy
 
     - name: "Terraform apply"
       if: inputs.apply == true && inputs.action == 'apply'
       working-directory: ./terraform/line-infra
+      env:
+        TF_VAR_EXOSCALE_API_KEY: ${{ inputs.exoscale_api_key }}
+        TF_VAR_EXOSCALE_API_SECRET: ${{ inputs.exoscale_api_secret }}
       shell: bash
       run: terraform apply -auto-approve
     - name: "Terraform destroy"
       if: inputs.apply == true && inputs.action == 'destroy'
       working-directory: ./terraform/line-infra
+      env:
+        TF_VAR_EXOSCALE_API_KEY: ${{ inputs.exoscale_api_key }}
+        TF_VAR_EXOSCALE_API_SECRET: ${{ inputs.exoscale_api_secret }}
       shell: bash
       run: terraform destroy -auto-approve
