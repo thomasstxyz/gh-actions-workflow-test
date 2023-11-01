@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.30.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.30.1...v1.30.2) (2023-11-01)
+
+
+### Bug Fixes
+
+* add needs ([18b2968](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/18b2968625c645aca0d7e515f8185ffc5c8af85d))
+
 ## [1.30.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.30.0...v1.30.1) (2023-11-01)
 
 
