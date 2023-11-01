@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.28.2...v1.29.0) (2023-11-01)
+
+
+### Features
+
+* uppercase vars ([9e8731e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/9e8731ed0ddd47cd4273ff2ffdcd824a798dc46e))
+
 ## [1.28.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.28.1...v1.28.2) (2023-11-01)
 
 
