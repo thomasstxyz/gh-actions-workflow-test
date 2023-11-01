@@ -26,14 +26,10 @@ on:
 concurrency:
   group: ${{ inputs.environment }}
 
-defaults:
-  run:
-    shell: bash
-  runs-on: ubuntu-latest
-
 jobs:
   terraform_plan:
     name: "terraform plan ${{ inputs.action }} ${{ inputs.environment }} environment"
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: "./.github/actions/terraform"
@@ -46,6 +42,7 @@ jobs:
     if: inputs.apply == true
     name: "terraform ${{ inputs.action }} ${{ inputs.environment }} environment"
     environment: ${{ inputs.environment }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: "./.github/actions/terraform"
