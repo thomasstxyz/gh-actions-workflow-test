@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.28.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.27.0...v1.28.0) (2023-11-01)
+
+
+### Features
+
+* feat ([0f9708c](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/0f9708cf11021d043ce046635d1f460a29660e6a))
+* implement terraform ([9646c63](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/9646c6312b69bf266ffd3340da5010c50795ccc4))
+
+
+### Bug Fixes
+
+* add env vars ([1c90adc](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/1c90adc28b52535dfa2cd45ec869e38c56e5a14d))
+* add vars ([30155ec](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/30155ec5a1eeae65dc7bc852828a5a1a42997516))
+* asdf ([acfe3e9](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/acfe3e95824af09ffc8f461dfcaf18c5d50519e5))
+* remove provider exoscale block ([18e4d26](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/18e4d26185d99b005b512bee739b7562fb2e7d35))
+
 ## [1.27.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.26.1...v1.27.0) (2023-10-31)
 
 
