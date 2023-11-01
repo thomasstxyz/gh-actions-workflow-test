@@ -7,6 +7,9 @@ terraform {
   }
 }
 
-# provider "exoscale" {
-#   # Configuration options
-# }
+variable "EXOSCALE_API_KEY" { type = string }
+variable "EXOSCALE_API_SECRET" { type = string }
+provider "exoscale" {
+  key    = var.EXOSCALE_API_KEY
+  secret = var.EXOSCALE_API_SECRET
+}
