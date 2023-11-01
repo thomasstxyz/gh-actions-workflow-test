@@ -63,14 +63,6 @@ runs:
       shell: bash
       run: terraform validate
 
-    - name: "debug"
-      working-directory: ./terraform/line-infra
-      shell: bash
-      run: |
-        pwd
-        ls -la
-        echo ${{ inputs.apply }}, ${{ inputs.action }},
-
     - name: "Terraform plan"
       if: inputs.action == 'apply'
       working-directory: ./terraform/line-infra
@@ -83,12 +75,12 @@ runs:
       run: terraform plan -destroy
 
     - name: "Terraform apply"
-      if: inputs.apply == true && inputs.action == 'apply'
+      if: inputs.apply == 'true' && inputs.action == 'apply'
       working-directory: ./terraform/line-infra
       shell: bash
       run: terraform apply -auto-approve
     - name: "Terraform destroy"
-      if: inputs.apply == true && inputs.action == 'destroy'
+      if: inputs.apply == 'true' && inputs.action == 'destroy'
       working-directory: ./terraform/line-infra
       shell: bash
       run: terraform destroy -auto-approve
