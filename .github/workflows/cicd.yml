@@ -21,6 +21,9 @@ env:
   # renovate: datasource=github-tags depName=kubernetes/kubectl
   KUBECTL_VERSION: v1.21.2
 
+  # test
+  IAC_DEPLOY_KEY: '${{ secrets.IAC_DEPLOY_KEY }}'
+
 jobs:
   release-please:
     if: github.event_name == 'push'
@@ -58,6 +61,8 @@ jobs:
           apply: false
           TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
           TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
+          # test
+          IAC_DEPLOY_KEY: ${{ env.IAC_DEPLOY_KEY }}
 
   # terraform_dryrun_demo:
   #   name: "[dry-run] apply demo environment"
