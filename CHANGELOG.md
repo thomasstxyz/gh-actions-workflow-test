@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.28.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.28.1...v1.28.2) (2023-11-01)
+
+
+### Bug Fixes
+
+* inputs vars are string in composite action ?? ([14ecacf](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/14ecacf8ea5f7b1429e20692a86eec27edd055f7))
+
 ## [1.28.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.28.0...v1.28.1) (2023-11-01)
 
 
