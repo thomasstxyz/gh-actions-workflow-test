@@ -42,9 +42,9 @@ runs:
     - name: Export multiline-string environment variables
       shell: bash
       run: |
-        read -r -d '' IAC_DEPLOY_KEY <<< "${{ inputs.IAC_DEPLOY_KEY }}"
-
-        echo "IAC_DEPLOY_KEY=${IAC_DEPLOY_KEY}" >> $GITHUB_ENV
+        echo 'IAC_DEPLOY_KEY<<EOF' >> $GITHUB_ENV
+        ${{ inputs.IAC_DEPLOY_KEY }} >> $GITHUB_ENV
+        echo 'EOF' >> $GITHUB_ENV
 
     - name: debug test IAC_DEPLOY_KEY
       shell: bash
