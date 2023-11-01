@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.30.3](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.30.2...v1.30.3) (2023-11-01)
+
+
+### Bug Fixes
+
+* bla ([d188ddb](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/d188ddbce839b10b94cede4061a0b69eb34921c1))
+* bla2 ([7faa7ca](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/7faa7ca5e253982c9667b11884e39af927a674a5))
+* bla3 ([5aef86a](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/5aef86a35ccf0f121d5aba6f5f331ebf126e3c4e))
+* nga ([703268b](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/703268bb345e60caa4496bdc88e92476fb063065))
+* pr test ([9ba12d8](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/9ba12d85ef15746d084ec01585c3dd1a266b809a))
+* test blaaa ([2cc69f5](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/2cc69f5b6b991df56f4df02df1e946fe7fa81046))
+* try assign var with 'read' cmd ([1bf5ab7](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/1bf5ab7a265997230e36cd93b6e6ee91e86a6078))
+
 ## [1.30.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.30.1...v1.30.2) (2023-11-01)
 
 
