@@ -42,8 +42,8 @@ runs:
     - name: Export multiline-string environment variables
       shell: bash
       run: |
-        TF_VAR_EXOSCALE_API_SECRET=$(printf "${{ inputs.TF_VAR_EXOSCALE_API_SECRET }}")
-        echo "TF_VAR_EXOSCALE_API_SECRET=${TF_VAR_EXOSCALE_API_SECRET}" >> $GITHUB_ENV
+        IAC_DEPLOY_KEY=$(printf "${{ inputs.IAC_DEPLOY_KEY }}")
+        echo "IAC_DEPLOY_KEY=${IAC_DEPLOY_KEY}" >> $GITHUB_ENV
 
     - name: debug test IAC_DEPLOY_KEY
       shell: bash
