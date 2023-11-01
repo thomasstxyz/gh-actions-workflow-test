@@ -23,6 +23,19 @@ on:
         required: true
         default: false
 
+env:
+  TF_VAR_EXOSCALE_API_KEY: '${{ secrets.TF_VAR_EXOSCALE_API_KEY }}'
+  TF_VAR_EXOSCALE_API_SECRET: '${{ secrets.TF_VAR_EXOSCALE_API_SECRET }}'
+
+  # renovate: datasource=github-releases depName=exoscale/cli
+  EXO_CLI_VERSION: v1.74.4
+
+  # renovate: datasource=github-releases depName=hashicorp/terraform
+  TERRAFORM_VERSION: 1.5.7
+
+  # renovate: datasource=github-tags depName=kubernetes/kubectl
+  KUBECTL_VERSION: v1.21.2
+
 concurrency:
   group: ${{ inputs.environment }}
 
@@ -37,6 +50,8 @@ jobs:
           environment: ${{ inputs.environment }}
           action: ${{ inputs.action }}
           apply: false
+          TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+          TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
   terraform_apply:
     if: inputs.apply == true
@@ -50,3 +65,5 @@ jobs:
           environment: ${{ inputs.environment }}
           action: ${{ inputs.action }}
           apply: ${{ inputs.apply }}
+          TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+          TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
