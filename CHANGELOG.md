@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.30.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.30.0...v1.30.1) (2023-11-01)
+
+
+### Bug Fixes
+
+* boo ([bec1535](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/bec15359209f7098720e84077c239e331ba3bf68))
+* env vars ([ec25270](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/ec252708a3a8e8b0e1fdb076902edaa6aab67662))
+* runs-on cannot be set in defaults ([ee646de](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/ee646de2477e68f787101b2387e737f057ef72ab))
+
 ## [1.30.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.29.0...v1.30.0) (2023-11-01)
 
 
