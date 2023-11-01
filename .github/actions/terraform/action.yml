@@ -64,17 +64,12 @@ runs:
       run: terraform validate
 
     - name: "debug"
-      shell: bash
-      run: |
-        pwd
-        ls -la
-
-    - name: "debug"
       working-directory: ./terraform/line-infra
       shell: bash
       run: |
         pwd
         ls -la
+        echo ${{ inputs.apply }}, ${{ inputs.action }},
 
     - name: "Terraform plan"
       if: inputs.action == 'apply'
