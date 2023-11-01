@@ -39,23 +39,43 @@ jobs:
           package-name: package1
           token: ${{ secrets.GITHUB_TOKEN }}
 
-  terraform_dryrun_demo:
-    name: "[dry-run] apply demo environment"
+  terraform_dryrun_matrix:
+    name: "[dry-run] terraform plan ${{ matrix.environment }}"
+    strategy:
+      fail-fast: false
+      matrix:
+        environment:
+          - dev
+          - demo
+          - prod
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: "./.github/actions/terraform"
         with:
-          environment: demo
+          environment: ${{ matrix.environment }}
           action: apply
           apply: false
           TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
           TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
+  # terraform_dryrun_demo:
+  #   name: "[dry-run] apply demo environment"
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: "./.github/actions/terraform"
+  #       with:
+  #         environment: demo
+  #         action: apply
+  #         apply: false
+  #         TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+  #         TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
+
   terraform_apply_demo:
     name: "apply demo environment"
     needs:
-      - terraform_dryrun_demo
+      - terraform_dryrun_matrix
       - release-please
     if: needs.release-please.outputs.releases_created == 'true'
     runs-on: ubuntu-latest
@@ -72,24 +92,24 @@ jobs:
           TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
           TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
-  terraform_dryrun_prod:
-    name: "[dry-run] apply prod environment"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: "./.github/actions/terraform"
-        with:
-          environment: prod
-          action: apply
-          apply: false
-          TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
-          TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
+  # terraform_dryrun_prod:
+  #   name: "[dry-run] apply prod environment"
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: "./.github/actions/terraform"
+  #       with:
+  #         environment: prod
+  #         action: apply
+  #         apply: false
+  #         TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+  #         TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
   terraform_apply_prod:
     name: "apply prod environment"
     needs:
       - terraform_apply_demo
-      - terraform_dryrun_prod
+      - terraform_dryrun_matrix
       - release-please
     if: needs.release-please.outputs.releases_created == 'true'
     runs-on: ubuntu-latest
