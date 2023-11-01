@@ -7,6 +7,6 @@ terraform {
   }
 }
 
-provider "exoscale" {
-  # Configuration options
-}
+# provider "exoscale" {
+#   # Configuration options
+# }
