@@ -26,10 +26,14 @@ on:
 concurrency:
   group: ${{ inputs.environment }}
 
+defaults:
+  run:
+    shell: bash
+  runs-on: ubuntu-latest
+
 jobs:
   terraform_plan:
     name: "terraform plan ${{ inputs.action }} ${{ inputs.environment }} environment"
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: "./.github/actions/terraform"
@@ -39,20 +43,8 @@ jobs:
           apply: false
 
   terraform_apply:
-    if: ${{ (!contains(fromJSON('["demo", "prod"]'), inputs.environment) && inputs.apply == true) }}
-    name: "${{ inputs.action }} ${{ inputs.environment }} environment"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: "./.github/actions/terraform"
-        with:
-          environment: ${{ inputs.environment }}
-          action: ${{ inputs.action }}
-          apply: ${{ inputs.apply }}
-  terraform_apply_with_approval:
-    if: ${{ (contains(fromJSON('["demo", "prod"]'), inputs.environment) && inputs.apply == true) }}
-    name: "${{ inputs.action }} ${{ inputs.environment }} environment"
-    runs-on: ubuntu-latest
+    if: inputs.apply == true
+    name: "terraform ${{ inputs.action }} ${{ inputs.environment }} environment"
     environment: ${{ inputs.environment }}
     steps:
       - uses: actions/checkout@v3
