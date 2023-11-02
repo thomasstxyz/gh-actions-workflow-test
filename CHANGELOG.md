@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.31.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.30.3...v1.31.0) (2023-11-02)
+
+
+### Features
+
+* my feat ([765c24b](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/765c24bf5c61c48985f6328ce441d7e2b16de03b))
+* name steps ([b2f68ee](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/b2f68eebb87816ccdda03984ee393c2a30f4d989))
+
 ## [1.30.3](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.30.2...v1.30.3) (2023-11-01)
 
 
