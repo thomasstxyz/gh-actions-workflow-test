@@ -54,7 +54,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: "./.github/actions/terraform"
+      - name: "terraform plan ${{ matrix.environment }}"
+        uses: "./.github/actions/terraform"
         with:
           environment: ${{ matrix.environment }}
           action: apply
@@ -89,7 +90,8 @@ jobs:
       group: demo
     steps:
       - uses: actions/checkout@v3
-      - uses: "./.github/actions/terraform"
+      - name: "terraform apply demo"
+        uses: "./.github/actions/terraform"
         with:
           environment: demo
           action: apply
@@ -123,7 +125,8 @@ jobs:
       group: prod
     steps:
       - uses: actions/checkout@v3
-      - uses: "./.github/actions/terraform"
+      - name: "terraform apply prod"
+        uses: "./.github/actions/terraform"
         with:
           environment: prod
           action: apply
