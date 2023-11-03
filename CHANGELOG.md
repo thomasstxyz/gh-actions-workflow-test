@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.32.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.31.0...v1.32.0) (2023-11-03)
+
+
+### Features
+
+* add renovate config ([c013ea2](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/c013ea2518add8d7eed2a9e84174d5edd71d9537))
+* **docs:** update readme ([cc29ca2](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/cc29ca22f79f1711c2ae741d6bfaa9a67bfe3f0b))
+* my feat ([ff016e3](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/ff016e371c04212c608f479eb123628fe035c6f1))
+* test renovate private oci registry datasourc ([e4f0df6](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/e4f0df6cd23639dd6775d89cded95f24b1c14d98))
+
+
+### Bug Fixes
+
+* oci --&gt; https ([f21ef95](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/f21ef951f685cbf0767e886ababaee0a9e0f8a15))
+* renov ([b5bf9c2](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/b5bf9c2a593fdd30f9a2c787fe3b5f25a0602576))
+
 ## [1.31.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.30.3...v1.31.0) (2023-11-02)
 
 
