@@ -19,7 +19,10 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["^platform/demo/descheduler/config\\.yaml$"],
+      "fileMatch": ["config\\.yaml$"],
+      "includePaths": [
+        "platform/demo/**/"
+      ],
       "matchStrings": ["repoURL: (?<registryUrl>.*?)\n *targetRevision: (?<currentValue>.*)\n *chart: (?<depName>.*?)\n"],
       "datasourceTemplate": "helm"
     }
