@@ -20,7 +20,10 @@ env:
   # x 1.5.7
 
   # renovate: datasource=docker depName=ghcr.io/thomasstxyz/charts/fhb-mcce-aktt2-schuetz-k8s-helm/app
-  AKTT2_CHART_VERSION: 0.1.3
+  AKTT2_PRIVATE_OCI_CHART_VERSION: 0.1.3
+
+  # renovate: datasource=docker depName=ghcr.io/thomasstxyz/gitops-promotions-operator
+  GOPRO_PUBLIC_DOCKER_IMAGE_VERSION: v0.1.2
 
   # renovate: datasource=github-tags depName=kubernetes/kubectl
   KUBECTL_VERSION: v1.21.2
