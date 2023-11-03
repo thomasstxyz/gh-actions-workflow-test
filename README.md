@@ -31,7 +31,14 @@ To encrypt the value, go to https://app.renovatebot.com/encrypt
   ]
 ```
 
-Resources:
+E.g. for use with regexManager:
+
+```yaml
+# renovate: datasource=docker depName=ghcr.io/thomasstxyz/my/private-oci-repository
+PRIVATE_OCI_CHART_VERSION: 0.1.3
+```
+
+Further Resources:
 - https://docs.renovatebot.com/getting-started/private-packages/#github-packages
 - https://github.com/renovatebot/renovate/discussions/22347
 - https://dille.name/blog/2022/11/27/using-private-container-registries-with-renovate/
