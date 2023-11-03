@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "hostrules": [
+  "hostRules": [
     {
       "hostType": "docker",
       "matchHost": "ghcr.io/thomasstxyz/charts/fhb-mcce-aktt2-schuetz-k8s-helm/app",
