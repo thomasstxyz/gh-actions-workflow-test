@@ -22,7 +22,7 @@ To encrypt the value, go to https://app.renovatebot.com/encrypt
   "hostRules": [
     {
       "hostType": "docker",
-      "matchHost": "ghcr.io",
+      "matchHost": "https://ghcr.io/thomasstxyz/my/private-oci-repository",
       "username": "thomasstxyz",
       "encrypted": {
         "password": "wcFMA/xDdHCJBTolAQ//RoOn1Jpnej8UPHFmcHAfxkZs..."
@@ -30,6 +30,7 @@ To encrypt the value, go to https://app.renovatebot.com/encrypt
     }
   ]
 ```
+> **NOTE:** Even though it is a `oci://` repository, we need to specify `https://`, because Renovate only checks for full paths (e.g. `.../thomasstxyz/my/private-oci-repository`) if the `https://` protocol is prefixed.
 
 E.g. for use with regexManager:
 
