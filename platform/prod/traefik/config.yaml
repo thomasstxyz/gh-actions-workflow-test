@@ -1,0 +1,4 @@
+repoURL: https://traefik.github.io/charts
+targetRevision: 21.1.0
+chart: traefik
+namespace: traefik

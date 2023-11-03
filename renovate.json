@@ -16,6 +16,12 @@
       "matchStrings": [
         "# renovate: datasource=(?<datasource>.+?) depName=(?<depName>.+?)\\s.*?_VERSION ?(\\??=|\\: ?) ?\\\"?(?<currentValue>.+?)?\\\"?\\s"
       ]
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^config\\.yaml$"],
+      "matchStrings": ["repoURL: (?<registryUrl>.*?)\n *targetRevision: (?<currentValue>.*)\n *chart: (?<depName>.*?)\n"],
+      "datasourceTemplate": "helm"
     }
   ],
   "hostRules": [
