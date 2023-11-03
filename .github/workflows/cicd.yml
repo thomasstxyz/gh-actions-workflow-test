@@ -13,7 +13,7 @@ env:
   TF_VAR_EXOSCALE_API_SECRET: '${{ secrets.TF_VAR_EXOSCALE_API_SECRET }}'
 
   # renovate: datasource=github-releases depName=exoscale/cli
-  EXO_CLI_VERSION: v1.74.4
+  EXO_CLI_VERSION: v1.74.3
 
   # renovate: datasource=github-releases depName=hashicorp/terraform
   TERRAFORM_VERSION: 1.4.1
