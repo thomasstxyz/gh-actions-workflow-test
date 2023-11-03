@@ -12,17 +12,17 @@ env:
   TF_VAR_EXOSCALE_API_KEY: '${{ secrets.TF_VAR_EXOSCALE_API_KEY }}'
   TF_VAR_EXOSCALE_API_SECRET: '${{ secrets.TF_VAR_EXOSCALE_API_SECRET }}'
 
-  # renovate:X datasource=github-releases depName=exoscale/cli
+  # renovate: datasource=github-releases depName=exoscale/cli
   EXO_CLI_VERSION: v1.74.4
 
-  # renovate:X datasource=github-releases depName=hashicorp/terraform
+  # renovate: datasource=github-releases depName=hashicorp/terraform
   TERRAFORM_VERSION: 1.5.6
   # TERRAFORM_VERSION: 1.5.7
 
   # renovate: datasource=docker depName=ghcr.io/thomasstxyz/charts/fhb-mcce-aktt2-schuetz-k8s-helm/app
   AKTT2_CHART_VERSION: 0.1.4
 
-  # renovate:X datasource=github-tags depName=kubernetes/kubectl
+  # renovate: datasource=github-tags depName=kubernetes/kubectl
   KUBECTL_VERSION: v1.21.2
 
   # test
