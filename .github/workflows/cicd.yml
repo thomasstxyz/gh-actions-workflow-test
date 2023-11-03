@@ -16,7 +16,8 @@ env:
   EXO_CLI_VERSION: v1.74.4
 
   # renovate: datasource=github-releases depName=hashicorp/terraform
-  TERRAFORM_VERSION: 1.5.7
+  TERRAFORM_VERSION: 1.5.6
+  # TERRAFORM_VERSION: 1.5.7
 
   # renovate: datasource=github-tags depName=kubernetes/kubectl
   KUBECTL_VERSION: v1.21.2
