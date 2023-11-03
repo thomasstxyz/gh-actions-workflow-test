@@ -20,10 +20,11 @@
   ],
   "hostRules": [
     {
-      "matchHost": "ghcr.io",
       "hostType": "docker",
+      "matchHost": "ghcr.io",
+      "username": "thomasstxyz",
       "encrypted": {
-        "token": "wcFMA/xDdHCJBTolAQ//RoOn1Jpnej8UPHFmcHAfxkZsdqh4jcCEThwUcbOAPoFIRf3RMUfWtupjllHtJeEX1+c8ORbY+mEcLw/GVXHAnVbzRww2S3gahC84gOBDMzhNh0Wb8W/tvnxthY4hgm3F1CBrtUN1hX1zrdCMlH9lIQzQFRZU6bSui4BNqRRy1l2yh1U0zptlniJ39Ln2OjpUOtWpJab0fsZdx6AzPnPcUbV9m1JYkq5Q24F1MleXKqYi22om+WC16QAdFrr7HEdC/oJbafF96ReKmb76XfXZh3IXKnwGKsilpQz8ORxFU+gyJcesqfFMnNPSOW4DUpTEi2uX7w9riROE8TTdP+QsqYs+LSlTszf5byjz6ECUQmODPTWcTXH8JfxZhfg9xZ4JO5MWrOr9KhqBPF9wH9cqPS6wGvZuZX00jab8M5s3CCmGlStQxp7RN8AilMadr2AoGqt5c/YUTmJcFE3xG/6RYheNEv/Yg3dQZxUWcPS5C9x5xFSSzaiCPXTs9TDQ5ugacduXwC/ueja8tbfe418RBibxMlYQH7VgAO88bSl8z1GkKqXzRzEgbC8115xNYt6Yp9NYs4GdeAcPCbqNA5PaqCnCcj6kfarVlPTxf3zsYN8LqtlsYyApajIrqh5VjYdCMrXE3OXx8tbC9gESS4xkGzB4k+HFZuAA2xi1tpiMMEDSegEFrHDdF895ZS+8YGmhEQNznvi+6KULgy/crktTPfQkkzXv3lvWW3Ajr6zm52IbrXMjQli9obzlEmas52KoxgrXpMpU81HrVLyCtt/pdUmDih2jwhHOWBPBp72S8AliYW7vjnxEaMpF6S2iTDa1oQavI0oRQ0B26Gaj"
+        "password": "wcFMA/xDdHCJBTolAQ//RoOn1Jpnej8UPHFmcHAfxkZsdqh4jcCEThwUcbOAPoFIRf3RMUfWtupjllHtJeEX1+c8ORbY+mEcLw/GVXHAnVbzRww2S3gahC84gOBDMzhNh0Wb8W/tvnxthY4hgm3F1CBrtUN1hX1zrdCMlH9lIQzQFRZU6bSui4BNqRRy1l2yh1U0zptlniJ39Ln2OjpUOtWpJab0fsZdx6AzPnPcUbV9m1JYkq5Q24F1MleXKqYi22om+WC16QAdFrr7HEdC/oJbafF96ReKmb76XfXZh3IXKnwGKsilpQz8ORxFU+gyJcesqfFMnNPSOW4DUpTEi2uX7w9riROE8TTdP+QsqYs+LSlTszf5byjz6ECUQmODPTWcTXH8JfxZhfg9xZ4JO5MWrOr9KhqBPF9wH9cqPS6wGvZuZX00jab8M5s3CCmGlStQxp7RN8AilMadr2AoGqt5c/YUTmJcFE3xG/6RYheNEv/Yg3dQZxUWcPS5C9x5xFSSzaiCPXTs9TDQ5ugacduXwC/ueja8tbfe418RBibxMlYQH7VgAO88bSl8z1GkKqXzRzEgbC8115xNYt6Yp9NYs4GdeAcPCbqNA5PaqCnCcj6kfarVlPTxf3zsYN8LqtlsYyApajIrqh5VjYdCMrXE3OXx8tbC9gESS4xkGzB4k+HFZuAA2xi1tpiMMEDSegEFrHDdF895ZS+8YGmhEQNznvi+6KULgy/crktTPfQkkzXv3lvWW3Ajr6zm52IbrXMjQli9obzlEmas52KoxgrXpMpU81HrVLyCtt/pdUmDih2jwhHOWBPBp72S8AliYW7vjnxEaMpF6S2iTDa1oQavI0oRQ0B26Gaj"
       }
     }
   ]

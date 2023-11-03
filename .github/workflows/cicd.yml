@@ -19,7 +19,7 @@ env:
   TERRAFORM_VERSION: 1.5.6
   # TERRAFORM_VERSION: 1.5.7
 
-  # renovate: datasource=docker depName=app lookupName=ghcr.io/thomasstxyz/charts/fhb-mcce-aktt2-schuetz-k8s-helm/app
+  # renovate: datasource=docker depName=ghcr.io/thomasstxyz/charts/fhb-mcce-aktt2-schuetz-k8s-helm/app
   AKTT2_CHART_VERSION: 0.1.4
 
   # renovate: datasource=github-tags depName=kubernetes/kubectl
