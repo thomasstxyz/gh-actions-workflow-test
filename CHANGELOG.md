@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.34.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.34.0...v1.34.1) (2023-11-06)
+
+
+### Bug Fixes
+
+* remove environment from plan jobs ([ac4d560](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/ac4d560872a1a78c46f431c491c75e1ead3e6adc))
+
 ## [1.34.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.33.0...v1.34.0) (2023-11-06)
 
 
