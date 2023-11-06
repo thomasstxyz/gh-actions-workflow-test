@@ -1,0 +1,81 @@
+name: Test Changes
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  TF_VAR_EXOSCALE_API_KEY: '${{ secrets.TF_VAR_EXOSCALE_API_KEY }}'
+  TF_VAR_EXOSCALE_API_SECRET: '${{ secrets.TF_VAR_EXOSCALE_API_SECRET }}'
+
+  # renovate: datasource=github-releases depName=exoscale/cli
+  EXO_CLI_VERSION: v1.74.3
+
+  # renovate: datasource=github-releases depName=hashicorp/terraform
+  TERRAFORM_VERSION: 1.4.1
+  # x 1.5.7
+
+  #
+
+  # renovate: datasource=docker depName=ghcr.io/thomasstxyz/charts/fhb-mcce-aktt2-schuetz-k8s-helm/app
+  AKTT2_PRIVATE_OCI_CHART_VERSION: 0.1.1
+
+  # renovate: datasource=docker depName=ghcr.io/thomasstxyz/gitops-promotions-operator
+  GOPRO_PUBLIC_DOCKER_IMAGE_VERSION: v0.1.1
+
+  # renovate: datasource=github-tags depName=ansible/awx-operator
+  AWX_OPERATOR_VERSION: 2.3.3
+
+  #
+
+  # renovate: datasource=github-tags depName=kubernetes/kubectl
+  KUBECTL_VERSION: v1.21.2
+
+  # test
+  IAC_DEPLOY_KEY: '${{ secrets.IAC_DEPLOY_KEY }}'
+      
+jobs:
+  terraform_plan:
+    name: "terraform plan ${{ matrix.environment }}"
+    strategy:
+      fail-fast: false
+      matrix:
+        environment:
+          - dev
+          - demo
+          - prod
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v3
+      - name: "terraform plan ${{ matrix.environment }}"
+        uses: "./.github/actions/terraform"
+        with:
+          environment: ${{ matrix.environment }}
+          action: apply
+
+          apply: false  # DO NOT CHANGE!
+
+          ### Begin Copypasta env-vars
+          TF_VAR_key: '${{ env.TF_VAR_key }}'
+          TF_VAR_secret: '${{ env.TF_VAR_secret }}'
+          TF_VAR_webhook_key: '${{ env.TF_VAR_webhook_key }}'
+          TF_VAR_webhook_secret: '${{ env.TF_VAR_webhook_secret }}'
+          TF_VAR_sealed_secrets_key: '${{ env.TF_VAR_sealed_secrets_key }}'
+          TF_VAR_sealed_secrets_cert: '${{ env.TF_VAR_sealed_secrets_cert }}'
+          AWS_ACCESS_KEY_ID: '${{ env.AWS_ACCESS_KEY_ID }}'
+          AWS_SECRET_ACCESS_KEY: '${{ env.AWS_SECRET_ACCESS_KEY }}'
+          EXOSCALE_API_KEY: '${{ env.EXOSCALE_API_KEY }}'
+          EXOSCALE_API_SECRET: '${{ env.EXOSCALE_API_SECRET }}'
+          TF_VAR_github_pat: '${{ env.TF_VAR_github_pat }}'
+          IAC_DEPLOY_KEY: '${{ env.IAC_DEPLOY_KEY }}'
+          EXO_CLI_VERSION: '${{ env.EXO_CLI_VERSION }}'
+          TERRAFORM_VERSION: '${{ env.TERRAFORM_VERSION }}'
+          KUBECTL_VERSION: '${{ env.KUBECTL_VERSION }}'
+          ### End Copypasta env-vars
