@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.34.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.33.0...v1.34.0) (2023-11-06)
+
+
+### Features
+
+* thsc review changes ([c037e2e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/c037e2e709d86f76df51d9fd87f0e28f899eff97))
+
+
+### Bug Fixes
+
+* wrong copypaste code ([97fbb1e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/97fbb1ec6c79642b55649f3e51b6cc4077566291))
+
 ## [1.33.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.32.0...v1.33.0) (2023-11-06)
 
 
