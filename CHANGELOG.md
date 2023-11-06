@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.34.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.34.1...v1.34.2) (2023-11-06)
+
+
+### Bug Fixes
+
+* run test workflow only on PR ([36daa15](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/36daa15f3369dab4cf6e7612b09df01a173dbe15))
+
 ## [1.34.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.34.0...v1.34.1) (2023-11-06)
 
 
