@@ -63,19 +63,6 @@ jobs:
           apply: false  # DO NOT CHANGE!
 
           ### Begin Copypasta env-vars
-          TF_VAR_key: '${{ env.TF_VAR_key }}'
-          TF_VAR_secret: '${{ env.TF_VAR_secret }}'
-          TF_VAR_webhook_key: '${{ env.TF_VAR_webhook_key }}'
-          TF_VAR_webhook_secret: '${{ env.TF_VAR_webhook_secret }}'
-          TF_VAR_sealed_secrets_key: '${{ env.TF_VAR_sealed_secrets_key }}'
-          TF_VAR_sealed_secrets_cert: '${{ env.TF_VAR_sealed_secrets_cert }}'
-          AWS_ACCESS_KEY_ID: '${{ env.AWS_ACCESS_KEY_ID }}'
-          AWS_SECRET_ACCESS_KEY: '${{ env.AWS_SECRET_ACCESS_KEY }}'
-          EXOSCALE_API_KEY: '${{ env.EXOSCALE_API_KEY }}'
-          EXOSCALE_API_SECRET: '${{ env.EXOSCALE_API_SECRET }}'
-          TF_VAR_github_pat: '${{ env.TF_VAR_github_pat }}'
-          IAC_DEPLOY_KEY: '${{ env.IAC_DEPLOY_KEY }}'
-          EXO_CLI_VERSION: '${{ env.EXO_CLI_VERSION }}'
-          TERRAFORM_VERSION: '${{ env.TERRAFORM_VERSION }}'
-          KUBECTL_VERSION: '${{ env.KUBECTL_VERSION }}'
+          TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+          TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
           ### End Copypasta env-vars
