@@ -51,58 +51,58 @@ jobs:
           TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
           TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
-  terraform_apply_demo:
-    name: "apply demo environment"
-    needs:
-      - terraform_plan_demo
-    runs-on: ubuntu-latest
-    environment: demo
-    concurrency:
-      group: demo
-    steps:
-      - uses: actions/checkout@v3
-      - name: "terraform apply demo"
-        uses: "./.github/actions/terraform"
-        with:
-          environment: demo
-          action: apply
-          apply: true
-          TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
-          TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
+  # terraform_apply_demo:
+  #   name: "apply demo environment"
+  #   needs:
+  #     - terraform_plan_demo
+  #   runs-on: ubuntu-latest
+  #   environment: demo
+  #   concurrency:
+  #     group: demo
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: "terraform apply demo"
+  #       uses: "./.github/actions/terraform"
+  #       with:
+  #         environment: demo
+  #         action: apply
+  #         apply: true
+  #         TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+  #         TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
-  terraform_plan_prod:
-    name: "plan prod environment"
-    needs:
-      - terraform_apply_demo
-    runs-on: ubuntu-latest
-    concurrency:
-      group: prod
-    steps:
-      - uses: actions/checkout@v3
-      - name: "terraform plan prod"
-        uses: "./.github/actions/terraform"
-        with:
-          environment: prod
-          action: apply
-          apply: false
-          TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
-          TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
+  # terraform_plan_prod:
+  #   name: "plan prod environment"
+  #   needs:
+  #     - terraform_apply_demo
+  #   runs-on: ubuntu-latest
+  #   concurrency:
+  #     group: prod
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: "terraform plan prod"
+  #       uses: "./.github/actions/terraform"
+  #       with:
+  #         environment: prod
+  #         action: apply
+  #         apply: false
+  #         TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+  #         TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
-  terraform_apply_prod:
-    name: "apply prod environment"
-    needs:
-      - terraform_plan_prod
-    runs-on: ubuntu-latest
-    environment: prod
-    concurrency:
-      group: prod
-    steps:
-      - uses: actions/checkout@v3
-      - name: "terraform apply prod"
-        uses: "./.github/actions/terraform"
-        with:
-          environment: prod
-          action: apply
-          apply: true
-          TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
-          TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
+  # terraform_apply_prod:
+  #   name: "apply prod environment"
+  #   needs:
+  #     - terraform_plan_prod
+  #   runs-on: ubuntu-latest
+  #   environment: prod
+  #   concurrency:
+  #     group: prod
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: "terraform apply prod"
+  #       uses: "./.github/actions/terraform"
+  #       with:
+  #         environment: prod
+  #         action: apply
+  #         apply: true
+  #         TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
+  #         TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
