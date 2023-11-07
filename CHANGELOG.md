@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.35.4](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.35.3...v1.35.4) (2023-11-07)
+
+
+### Bug Fixes
+
+* yaml syntax error ([d368a37](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/d368a372bbf3cf890ae8cbf2b841a08f38c9999c))
+
 ## [1.35.3](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.35.2...v1.35.3) (2023-11-07)
 
 
