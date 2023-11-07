@@ -68,13 +68,14 @@ jobs:
         with:
           ref: "${{ env.dest_branch }}"
           token: "${{ secrets.GH_PAT }}"
-      - name: reset PR branch onto main branch
-        run: |
-          git config --global user.name 'Your Name'
-          git config --global user.email 'your-username@users.noreply.github.com'
-          git fetch --all
-          git rebase --onto ${{ env.deploy_tag_ref }} origin/${{ env.source_branch }}
-          git push -u origin ${{ env.dest_branch }} --force
+      # - name: reset PR branch onto main branch
+      #   run: |
+      #     git config --global user.name 'Your Name'
+      #     git config --global user.email 'your-username@users.noreply.github.com'
+      #     git fetch --all
+      #     git rebase --onto ${{ env.deploy_tag_ref }} origin/${{ env.source_branch }}
+      #     git push -u origin ${{ env.dest_branch }} --force
+
       # TODO: check if PR already exists?
       - name: create pull request
         run: >
