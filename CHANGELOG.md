@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.35.5](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.35.4...v1.35.5) (2023-11-07)
+
+
+### Bug Fixes
+
+* asdf ([46ee2d5](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/46ee2d5062a4cae77590d3cb82590f76211d615a))
+
 ## [1.35.4](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.35.3...v1.35.4) (2023-11-07)
 
 
