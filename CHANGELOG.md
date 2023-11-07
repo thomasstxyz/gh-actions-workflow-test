@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.35.3](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.35.2...v1.35.3) (2023-11-07)
+
+
+### Bug Fixes
+
+* token ([1d67d20](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/1d67d20186b7d434944931d7fca8d0e98eb52996))
+
 ## [1.35.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.35.1...v1.35.2) (2023-11-07)
 
 
