@@ -67,11 +67,11 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: "${{ env.dest_branch }}"
+          token: "${{ secrets.GH_PAT }}"
       - name: reset PR branch onto main branch
         run: |
           git config --global user.name 'Your Name'
           git config --global user.email 'your-username@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/$GITHUB_REPOSITORY
           git fetch --all
           git rebase --onto ${{ env.deploy_tag_ref }} origin/${{ env.source_branch }}
           git push -u origin ${{ env.dest_branch }} --force
