@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.35.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.34.2...v1.35.0) (2023-11-07)
+
+
+### Features
+
+* raise PR to deploy to prod ([ae60788](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/ae60788669373519725f208d707a097dd8d38828))
+
 ## [1.34.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.34.1...v1.34.2) (2023-11-06)
 
 
