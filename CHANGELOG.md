@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.35.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.35.1...v1.35.2) (2023-11-07)
+
+
+### Bug Fixes
+
+* add needs dep to deploy_prod ([5f2ae24](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/5f2ae24dbf323521145cf10a3fa7617ccac568d8))
+* set auth ([fabea57](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/fabea57b8fb21913c91845fbdef4f86438fbf9f3))
+
 ## [1.35.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.35.0...v1.35.1) (2023-11-07)
 
 
