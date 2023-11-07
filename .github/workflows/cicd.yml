@@ -53,6 +53,8 @@ jobs:
 
   raise_pr_deploy_prod:
     name: "Raise PR to deploy to prod"
+    needs:
+      - terraform_plan_demo
     runs-on: ubuntu-latest
     concurrency:
       group: prod
