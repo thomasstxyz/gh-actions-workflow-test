@@ -77,7 +77,7 @@ jobs:
           git push -u origin ${{ env.dest_branch }} --force
       # TODO: check if PR already exists?
       - name: create pull request
-        run: |-
+        run: >
           gh pr create
           -B ${{ env.dest_branch }}
           -H ${{ env.source_branch }}
