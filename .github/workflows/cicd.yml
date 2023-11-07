@@ -51,6 +51,37 @@ jobs:
           TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
           TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
+  raise_pr_deploy_prod:
+    name: "Raise PR to deploy to prod"
+    runs-on: ubuntu-latest
+    concurrency:
+      group: prod
+    env:
+      source_branch: "${{ github.event.repository.default_branch }}"
+      dest_branch: "prod"
+      deploy_tag_ref: "${{ github.ref_name }}"
+    steps:
+      - name: checkout PR branch
+        uses: actions/checkout@v3
+        with:
+          ref: "${{ env.dest_branch }}"
+      - name: reset PR branch onto main branch
+        run: |
+          git config --global user.name 'Your Name'
+          git config --global user.email 'your-username@users.noreply.github.com'
+          git rebase --onto ${{ env.deploy_tag_ref }} origin/${{ env.source_branch }}
+          git push -u origin ${{ env.dest_branch }} --force
+      # TODO: check if PR already exists?
+      - name: create pull request
+        run: |-
+          gh pr create
+          -B ${{ env.dest_branch }}
+          -H ${{ env.source_branch }}
+          --title 'Merge ${{ env.source_branch }} into ${{ env.dest_branch }}'
+          --body 'Created by Github action'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+
   # terraform_apply_demo:
   #   name: "apply demo environment"
   #   needs:
