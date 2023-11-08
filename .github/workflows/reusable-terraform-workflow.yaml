@@ -37,8 +37,6 @@ on:
         required: true
         type: string
 
-concurrency: ${{ inputs.environment }}
-
 env:
   # renovate: datasource=github-releases depName=exoscale/cli
   EXO_CLI_VERSION: v1.74.3
