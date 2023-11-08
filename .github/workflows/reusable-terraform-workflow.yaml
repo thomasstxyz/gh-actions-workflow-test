@@ -1,0 +1,117 @@
+name: Deploy terraform
+run-name: "Deploy to ${{ inputs.environment }} environment"
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+      action:
+        required: true
+        type: string
+      apply:
+        required: true
+        type: string
+
+env:
+  # renovate: datasource=github-releases depName=exoscale/cli
+  EXO_CLI_VERSION: v1.74.3
+
+  # renovate: datasource=github-releases depName=hashicorp/terraform
+  TERRAFORM_VERSION: 1.4.1
+  # x 1.5.7
+
+  # renovate: datasource=github-tags depName=kubernetes/kubectl
+  KUBECTL_VERSION: v1.21.2
+
+  # test
+  IAC_DEPLOY_KEY: '${{ secrets.IAC_DEPLOY_KEY }}'
+     
+  #
+
+  # renovate: datasource=docker depName=ghcr.io/thomasstxyz/charts/fhb-mcce-aktt2-schuetz-k8s-helm/app
+  AKTT2_PRIVATE_OCI_CHART_VERSION: 0.1.1
+
+  # renovate: datasource=docker depName=ghcr.io/thomasstxyz/gitops-promotions-operator
+  GOPRO_PUBLIC_DOCKER_IMAGE_VERSION: v0.1.1
+
+  # renovate: datasource=github-tags depName=ansible/awx-operator
+  AWX_OPERATOR_VERSION: 2.3.3
+
+jobs:
+  reusable_workflow_job:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Export environment variables
+      shell: bash
+      run: |
+        TF_VAR_EXOSCALE_API_KEY="${{ secrets.TF_VAR_EXOSCALE_API_KEY }}"
+        echo "TF_VAR_EXOSCALE_API_KEY=${TF_VAR_EXOSCALE_API_KEY}" >> $GITHUB_ENV
+
+        TF_VAR_EXOSCALE_API_SECRET="${{ secrets.TF_VAR_EXOSCALE_API_SECRET }}"
+        echo "TF_VAR_EXOSCALE_API_SECRET=${TF_VAR_EXOSCALE_API_SECRET}" >> $GITHUB_ENV
+
+    - name: Export multiline-string environment variables
+      shell: bash
+      run: |
+        EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+        echo "IAC_DEPLOY_KEY<<$EOF" >> $GITHUB_ENV
+        echo "${{ secrets.IAC_DEPLOY_KEY }}" >> $GITHUB_ENV
+        echo "$EOF" >> $GITHUB_ENV
+
+    - name: debug test IAC_DEPLOY_KEY
+      shell: bash
+      run: echo "${IAC_DEPLOY_KEY}"
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@a1502cd9e758c50496cc9ac5308c4843bcd56d36 # v3
+      with:
+        terraform_version: ${{ env.TERRAFORM_VERSION }}
+        terraform_wrapper: false
+
+    - name: Terraform Init
+      working-directory: ./terraform/line-infra
+      id: init
+      shell: bash
+      run: |
+        terraform init
+
+    # - name: select workspace
+    #   working-directory: ./terraform/line-infra
+    #   shell: bash
+    #   run: terraform workspace select ${{ inputs.environment }}
+
+    - name: terraform fmt
+      working-directory: ./terraform/line-infra
+      shell: bash
+      run: terraform fmt --recursive
+
+    - name: "Terraform validate"
+      working-directory: ./terraform/line-infra
+      shell: bash
+      run: terraform validate
+
+    - name: "Terraform plan"
+      if: inputs.action == 'apply'
+      working-directory: ./terraform/line-infra
+      shell: bash
+      run: terraform plan
+    - name: "Terraform plan -destroy"
+      if: inputs.action == 'destroy'
+      working-directory: ./terraform/line-infra
+      shell: bash
+      run: terraform plan -destroy
+
+    - name: "Terraform apply"
+      if: inputs.apply == 'true' && inputs.action == 'apply'
+      working-directory: ./terraform/line-infra
+      shell: bash
+      run: terraform apply -auto-approve
+    - name: "Terraform destroy"
+      if: inputs.apply == 'true' && inputs.action == 'destroy'
+      working-directory: ./terraform/line-infra
+      shell: bash
+      run: terraform destroy -auto-approve
