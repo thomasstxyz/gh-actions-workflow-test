@@ -1,4 +1,4 @@
-name: Deploy terraform
+name: terraform
 run-name: "${{ inputs.action }} ${{ inputs.environment }} environment by @${{ github.actor }}"
 
 on:

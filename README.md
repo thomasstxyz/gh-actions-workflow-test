@@ -1,6 +1,6 @@
 # gh-actions-workflow-test
 
-my feature.2
+my feature.
 
 ## release-please and github_token
 
