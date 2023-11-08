@@ -1,7 +1,30 @@
 name: Deploy terraform
-run-name: "Deploy to ${{ inputs.environment }} environment"
+run-name: "${{ inputs.action }} ${{ inputs.environment }} environment by @${{ github.actor }}"
 
 on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment which should be applied/destroyed'
+        required: true
+        default: "lab"
+        type: environment
+      action:
+        description: 'Action to be taken'
+        required: true
+        default: "apply"
+        type: choice
+        options:
+          - "apply"
+          - "destroy"
+      apply:
+        type: choice
+        options:
+          - "true"
+          - "false"
+        description: 'Apply the configuration? (Destructive!)'
+        required: true
+        default: "false"
   workflow_call:
     inputs:
       environment:
@@ -13,6 +36,8 @@ on:
       apply:
         required: true
         type: string
+
+concurrency: ${{ inputs.environment }}
 
 env:
   # renovate: datasource=github-releases depName=exoscale/cli
