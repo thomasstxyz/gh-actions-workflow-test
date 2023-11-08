@@ -26,6 +26,6 @@ jobs:
         with:
           branch: "${{ matrix.environment }}-promotion"
           token: ${{ secrets.GH_PAT }}
-          title: "Deploy ${{ github.ref_name }} to ${{ matrix.environment }}"
+          title: "Release ${{ github.ref_name }} to ${{ matrix.environment }}"
           body: |
             Merging this PR will deploy ${{ github.ref_name }} to the **${{ matrix.environment }}** environment.
