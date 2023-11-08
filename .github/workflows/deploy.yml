@@ -7,61 +7,13 @@ on:
       - "demo"
       - "prod"
 
-env:
-  TF_VAR_EXOSCALE_API_KEY: '${{ secrets.TF_VAR_EXOSCALE_API_KEY }}'
-  TF_VAR_EXOSCALE_API_SECRET: '${{ secrets.TF_VAR_EXOSCALE_API_SECRET }}'
-
-  # renovate: datasource=github-releases depName=exoscale/cli
-  EXO_CLI_VERSION: v1.74.3
-
-  # renovate: datasource=github-releases depName=hashicorp/terraform
-  TERRAFORM_VERSION: 1.4.1
-  # x 1.5.7
-
-  #
-
-  # renovate: datasource=docker depName=ghcr.io/thomasstxyz/charts/fhb-mcce-aktt2-schuetz-k8s-helm/app
-  AKTT2_PRIVATE_OCI_CHART_VERSION: 0.1.1
-
-  # renovate: datasource=docker depName=ghcr.io/thomasstxyz/gitops-promotions-operator
-  GOPRO_PUBLIC_DOCKER_IMAGE_VERSION: v0.1.1
-
-  # renovate: datasource=github-tags depName=ansible/awx-operator
-  AWX_OPERATOR_VERSION: 2.3.3
-
-  #
-
-  # renovate: datasource=github-tags depName=kubernetes/kubectl
-  KUBECTL_VERSION: v1.21.2
-
-  # test
-  IAC_DEPLOY_KEY: '${{ secrets.IAC_DEPLOY_KEY }}'
+concurrency: ${{ github.ref_name }}
 
 jobs:
-  terraform_plan:
-    name: "plan ${{ github.ref_name }} environment"
-    runs-on: ubuntu-latest
-    concurrency:
-      group: ${{ github.ref_name }}
-    steps:
-      - uses: actions/checkout@v3
-      - name: "terraform plan ${{ github.ref_name }}"
-        uses: "./.github/actions/terraform"
-        with:
-          environment: ${{ github.ref_name }}
-          action: apply
-          apply: false
-          TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
-          TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
-
-  terraform_apply:
-    name: "apply ${{ github.ref_name }} environment"
-    needs:
-      - terraform_plan
-    runs-on: ubuntu-latest
-    environment: ${{ github.ref_name }}
-    concurrency:
-      group: ${{ github.ref_name }}
-    steps:
-      - uses: actions/checkout@v3
-      - run: echo simulate deploy to ${{ github.ref_name }} environment
+  terraform:
+    uses: ./.github/workflows/reusable-terraform-workflow.yaml
+    with:
+      environment: "${{ github.ref_name }}"
+      action: "apply"
+      apply: "true"
+    secrets: inherit
