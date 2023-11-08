@@ -7,6 +7,8 @@ on:
       - "demo"
       - "prod"
 
+concurrency: ${{ github.ref_name }}
+
 jobs:
   terraform:
     uses: ./.github/workflows/reusable-terraform-workflow.yaml
@@ -15,4 +17,3 @@ jobs:
       action: "apply"
       apply: "true"
     secrets: inherit
-    concurrency: ${{ github.ref_name }}
