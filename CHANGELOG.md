@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.36.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.35.5...v1.36.0) (2023-11-08)
+
+
+### Features
+
+* use GH action for PR ([6b53a0e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/6b53a0ecef0ff25c1941213bbfeb5541ed962d55))
+
 ## [1.35.5](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.35.4...v1.35.5) (2023-11-07)
 
 
