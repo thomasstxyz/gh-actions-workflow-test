@@ -1,8 +1,10 @@
-name: Deploy to prod environment
+name: Deploy terraform
+run-name: "Deploy to ${{ github.ref_name }} environment"
 
 on:
   push:
     branches:
+      - "demo"
       - "prod"
 
 env:
@@ -36,38 +38,30 @@ env:
   IAC_DEPLOY_KEY: '${{ secrets.IAC_DEPLOY_KEY }}'
 
 jobs:
-  terraform_plan_prod:
-    name: "plan prod environment"
+  terraform_plan:
+    name: "plan ${{ github.ref_name }} environment"
     runs-on: ubuntu-latest
     concurrency:
-      group: prod
+      group: ${{ github.ref_name }}
     steps:
       - uses: actions/checkout@v3
-      - name: "terraform plan prod"
+      - name: "terraform plan ${{ github.ref_name }}"
         uses: "./.github/actions/terraform"
         with:
-          environment: prod
+          environment: ${{ github.ref_name }}
           action: apply
           apply: false
           TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
           TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
-  terraform_apply_prod:
-    name: "apply prod environment"
+  terraform_apply:
+    name: "apply ${{ github.ref_name }} environment"
     needs:
-      - terraform_plan_prod
+      - terraform_plan
     runs-on: ubuntu-latest
-    environment: prod
+    environment: ${{ github.ref_name }}
     concurrency:
-      group: prod
+      group: ${{ github.ref_name }}
     steps:
       - uses: actions/checkout@v3
-      - run: echo simulate deploy to prod environment
-      # - name: "terraform apply prod"
-      #   uses: "./.github/actions/terraform"
-      #   with:
-      #     environment: prod
-      #     action: apply
-      #     apply: true
-      #     TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
-      #     TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
+      - run: echo simulate deploy to ${{ github.ref_name }} environment
