@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.36.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.1...v1.36.2) (2023-11-08)
+
+
+### Bug Fixes
+
+* add token to create pr step ([e9bce9e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/e9bce9e2ae5e0dafb1e7114dfad1f2c6af9f4257))
+* use example to create PR ([3b32df6](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/3b32df669dc4f214024868181fd28c6cf4f03c6a))
+
 ## [1.36.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.0...v1.36.1) (2023-11-08)
 
 
