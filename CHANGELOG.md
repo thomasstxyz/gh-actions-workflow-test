@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.39.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.38.0...v1.39.0) (2023-11-08)
+
+
+### Features
+
+* add deploy-prod workflow ([26092bb](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/26092bb06fb474791087604a3597aab3f74b4e18))
+
 ## [1.38.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.37.2...v1.38.0) (2023-11-08)
 
 
