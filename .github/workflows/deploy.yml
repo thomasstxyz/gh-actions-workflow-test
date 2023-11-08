@@ -1,13 +1,11 @@
-name: Deploy terraform
-run-name: "Deploy to ${{ github.ref_name }} environment"
+name: deploy
+run-name: "deploy ${{ github.ref_name }}"
 
 on:
   push:
     branches:
       - "demo"
       - "prod"
-
-concurrency: ${{ github.ref_name }}
 
 jobs:
   terraform:
