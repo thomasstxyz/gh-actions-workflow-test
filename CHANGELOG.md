@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.36.5](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.4...v1.36.5) (2023-11-08)
+
+
+### Bug Fixes
+
+* bla ([8a681c5](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/8a681c568b3e439916a290fa99da2a6ae8cd736f))
+
 ## [1.36.4](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.3...v1.36.4) (2023-11-08)
 
 
