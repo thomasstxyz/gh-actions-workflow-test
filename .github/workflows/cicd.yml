@@ -51,40 +51,57 @@ jobs:
           TF_VAR_EXOSCALE_API_KEY: ${{ env.TF_VAR_EXOSCALE_API_KEY }}
           TF_VAR_EXOSCALE_API_SECRET: ${{ env.TF_VAR_EXOSCALE_API_SECRET }}
 
-  raise_pr_deploy_prod:
-    name: "Raise PR to deploy to prod"
+  createPullRequest:
     needs:
       - terraform_plan_demo
     runs-on: ubuntu-latest
     concurrency:
       group: prod
     env:
-      source_branch: "${{ github.event.repository.default_branch }}"
+      # source_branch: "main"
       dest_branch: "prod"
       deploy_tag_ref: "${{ github.ref_name }}"
     steps:
-      - name: checkout PR branch
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          ref: "${{ env.dest_branch }}"
-          token: "${{ secrets.GH_PAT }}"
-      - name: reset PR branch onto main branch
+          ref: prod
+      - name: Reset promotion branch
         run: |
-          git config --global user.name 'Your Name'
-          git config --global user.email 'your-username@users.noreply.github.com'
-          git fetch --all
-          git rebase --onto ${{ env.deploy_tag_ref }} origin/${{ env.source_branch }}
-          git push -u origin ${{ env.dest_branch }} --force
-      # TODO: check if PR already exists?
-      - name: create pull request
-        run: >
-          gh pr create
-          -B ${{ env.dest_branch }}
-          -H ${{ env.source_branch }}
-          --title 'Merge ${{ env.source_branch }} into ${{ env.dest_branch }}'
-          --body 'Created by Github action'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          git fetch origin main:main
+          git reset --hard main
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          branch: prod-promotion
+          token: ${{ secrets.GH_PAT }}
+
+      # - uses: actions/checkout@v4
+
+      # - name: Create Pull Request
+      #   id: cpr
+      #   uses: peter-evans/create-pull-request@v5
+      #   with:
+      #     token: ${{ secrets.GH_PAT }}
+      #     commit-message: Update report
+      #     committer: GitHub <noreply@github.com>
+      #     author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+      #     signoff: false
+      #     base: "${{ env.dest_branch }}"
+      #     branch: "create-pull-request/patch"
+      #     delete-branch: false
+      #     title: 'Merge main into prod'
+      #     body: |
+      #       hello
+      #     # labels: |
+      #     #   report
+      #     #   automated pr
+      #     assignees: thomasstxyz
+      #     reviewers: thomasstxyz
+      #     # team-reviewers: |
+      #     #   developers
+      #     #   qa-team
+      #     # milestone: 1
+      #     draft: false
 
   # terraform_apply_demo:
   #   name: "apply demo environment"

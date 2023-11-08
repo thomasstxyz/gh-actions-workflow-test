@@ -2,9 +2,15 @@ name: release-please
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - 'main'
 
 jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "date"
+
   release-please:
     permissions:
       contents: write

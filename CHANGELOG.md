@@ -1,5 +1,84 @@
 # Changelog
 
+## [1.38.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.37.2...v1.38.0) (2023-11-08)
+
+
+### Features
+
+* date ([88b51ab](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/88b51ab76d337aaecabe16e93f7c892675872751))
+
+## [1.37.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.37.1...v1.37.2) (2023-11-08)
+
+
+### Bug Fixes
+
+* blar ([83bebb4](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/83bebb433ef9e89fada9418d4f2bcd2d332053c6))
+
+## [1.37.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.37.0...v1.37.1) (2023-11-08)
+
+
+### Bug Fixes
+
+* asdf ([90f8563](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/90f856307aebdb8372f473802b9f9bed4c903848))
+
+## [1.37.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.5...v1.37.0) (2023-11-08)
+
+
+### Features
+
+* ma ([257c406](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/257c406fa6bae17352defef32dda28f49cd92165))
+
+## [1.36.5](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.4...v1.36.5) (2023-11-08)
+
+
+### Bug Fixes
+
+* bla ([8a681c5](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/8a681c568b3e439916a290fa99da2a6ae8cd736f))
+
+## [1.36.4](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.3...v1.36.4) (2023-11-08)
+
+
+### Bug Fixes
+
+* run release-please only on push main ([6dbec11](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/6dbec11e0664eca35d550636116d598df325c968))
+
+## [1.36.3](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.2...v1.36.3) (2023-11-08)
+
+
+### Bug Fixes
+
+* dont run release-please if event is pr ([24b172d](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/24b172d7e0ee51c9c34b7ac300c9b9e42e476f17))
+* string syntax ([794417c](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/794417c2d7439f6df9842f5c8ba19ee49f338d21))
+
+## [1.36.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.1...v1.36.2) (2023-11-08)
+
+
+### Bug Fixes
+
+* add token to create pr step ([e9bce9e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/e9bce9e2ae5e0dafb1e7114dfad1f2c6af9f4257))
+* use example to create PR ([3b32df6](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/3b32df669dc4f214024868181fd28c6cf4f03c6a))
+
+## [1.36.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.0...v1.36.1) (2023-11-08)
+
+
+### Bug Fixes
+
+* base branch ([ceb62b3](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/ceb62b3c32a27c4c60333a2762eeacee7449c308))
+
+## [1.36.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.35.5...v1.36.0) (2023-11-08)
+
+
+### Features
+
+* use GH action for PR ([6b53a0e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/6b53a0ecef0ff25c1941213bbfeb5541ed962d55))
+
+## [1.35.5](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.35.4...v1.35.5) (2023-11-07)
+
+
+### Bug Fixes
+
+* asdf ([46ee2d5](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/46ee2d5062a4cae77590d3cb82590f76211d615a))
+
 ## [1.35.4](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.35.3...v1.35.4) (2023-11-07)
 
 
