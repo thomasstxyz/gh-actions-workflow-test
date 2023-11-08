@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.44.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.43.1...v1.44.0) (2023-11-08)
+
+
+### Features
+
+* use reusable workflow to clean up code ([bb38d9d](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/bb38d9d7ef796ed2102ec831f20df3165d215008))
+
+
+### Bug Fixes
+
+* conc at workflow level ([c87caf8](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/c87caf89761f14ad3aa002f698394f2c059dcb61))
+* concurrency, remove some ([6cd0b0d](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/6cd0b0d8d2b00ec5644ff872ccb2c14268d0bd14))
+
 ## [1.43.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.43.0...v1.43.1) (2023-11-08)
 
 
