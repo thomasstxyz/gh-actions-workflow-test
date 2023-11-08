@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.45.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.44.0...v1.45.0) (2023-11-08)
+
+
+### Features
+
+* add manual trigga ([d55bbba](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/d55bbba7dbdff268f25868069a2ce625f2d50bd7))
+
+
+### Bug Fixes
+
+* release to env ([cdbc0a0](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/cdbc0a07d87cbaa8a2d619672119623b00836aa6))
+* remove concurrency ([6d9582e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/6d9582e628c67eb26133f01ea36b79d7088b379d))
+
 ## [1.44.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.43.1...v1.44.0) (2023-11-08)
 
 
