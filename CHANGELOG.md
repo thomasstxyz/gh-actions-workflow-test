@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.36.4](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.3...v1.36.4) (2023-11-08)
+
+
+### Bug Fixes
+
+* run release-please only on push main ([6dbec11](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/6dbec11e0664eca35d550636116d598df325c968))
+
 ## [1.36.3](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.2...v1.36.3) (2023-11-08)
 
 
