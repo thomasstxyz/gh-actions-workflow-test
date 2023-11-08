@@ -13,8 +13,6 @@ jobs:
           - demo
           - prod
     runs-on: ubuntu-latest
-    concurrency:
-      group: "${{ matrix.environment }}"
     steps:
       - uses: actions/checkout@v4
         with:

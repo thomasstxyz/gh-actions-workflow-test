@@ -23,4 +23,3 @@ jobs:
       action: "apply"
       apply: "false"
     secrets: inherit
-    concurrency: ${{ matrix.environment }}
