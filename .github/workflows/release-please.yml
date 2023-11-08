@@ -6,7 +6,7 @@ on:
 
 jobs:
   release-please:
-    if: github.event_name != 'pull_request'
+    if: github.ref == 'refs/heads/main'
     permissions:
       contents: write
       pull-requests: write
