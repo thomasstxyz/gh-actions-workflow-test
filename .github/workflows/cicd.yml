@@ -73,6 +73,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           branch: prod-promotion
+          token: ${{ secrets.GH_PAT }}
 
       # - uses: actions/checkout@v4
 
