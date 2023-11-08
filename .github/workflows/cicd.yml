@@ -63,32 +63,44 @@ jobs:
       deploy_tag_ref: "${{ github.ref_name }}"
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          ref: prod
+      - name: Reset promotion branch
+        run: |
+          git fetch origin main:main
+          git reset --hard main
       - name: Create Pull Request
-        id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
-          token: ${{ secrets.GH_PAT }}
-          commit-message: Update report
-          committer: GitHub <noreply@github.com>
-          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          signoff: false
-          base: "${{ env.dest_branch }}"
-          branch: "create-pull-request/patch"
-          delete-branch: false
-          title: 'Merge main into prod'
-          body: |
-            hello
-          # labels: |
-          #   report
-          #   automated pr
-          assignees: thomasstxyz
-          reviewers: thomasstxyz
-          # team-reviewers: |
-          #   developers
-          #   qa-team
-          # milestone: 1
-          draft: false
+          branch: prod-promotion
+
+      # - uses: actions/checkout@v4
+
+      # - name: Create Pull Request
+      #   id: cpr
+      #   uses: peter-evans/create-pull-request@v5
+      #   with:
+      #     token: ${{ secrets.GH_PAT }}
+      #     commit-message: Update report
+      #     committer: GitHub <noreply@github.com>
+      #     author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+      #     signoff: false
+      #     base: "${{ env.dest_branch }}"
+      #     branch: "create-pull-request/patch"
+      #     delete-branch: false
+      #     title: 'Merge main into prod'
+      #     body: |
+      #       hello
+      #     # labels: |
+      #     #   report
+      #     #   automated pr
+      #     assignees: thomasstxyz
+      #     reviewers: thomasstxyz
+      #     # team-reviewers: |
+      #     #   developers
+      #     #   qa-team
+      #     # milestone: 1
+      #     draft: false
 
   # terraform_apply_demo:
   #   name: "apply demo environment"
