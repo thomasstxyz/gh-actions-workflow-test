@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.43.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.42.0...v1.43.0) (2023-11-08)
+
+
+### Features
+
+* bluarnzn ([262b88c](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/262b88cbac8c2061ace5b4b31e4a2249af143bdc))
+
+## [1.42.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.41.0...v1.42.0) (2023-11-08)
+
+
+### Features
+
+* blaeradf ([195d795](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/195d795d9f333a1efd203192d6031e03860ecc5b))
+
 ## [1.41.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.40.0...v1.41.0) (2023-11-08)
 
 
