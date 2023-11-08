@@ -74,6 +74,10 @@ jobs:
         with:
           branch: prod-promotion
           token: ${{ secrets.GH_PAT }}
+          title: "Deploy prod"
+          body: |
+            Merging this PR will deploy to the **prod** environment.
+          # reviewers: peter-evans
 
       # - uses: actions/checkout@v4
 

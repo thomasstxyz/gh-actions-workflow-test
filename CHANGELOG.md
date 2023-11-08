@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.40.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.39.0...v1.40.0) (2023-11-08)
+
+
+### Features
+
+* pr title and body ([5cf6aba](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/5cf6aba479e84bebcf611ffa60adea9b28c7eac1))
+
 ## [1.39.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.38.0...v1.39.0) (2023-11-08)
 
 
