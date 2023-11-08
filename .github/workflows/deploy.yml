@@ -1,4 +1,4 @@
-name: Deploy terraform
+name: Deploy environment
 run-name: "Deploy to ${{ github.ref_name }} environment"
 
 on:
