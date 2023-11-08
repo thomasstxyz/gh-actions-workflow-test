@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.37.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.37.1...v1.37.2) (2023-11-08)
+
+
+### Bug Fixes
+
+* blar ([83bebb4](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/83bebb433ef9e89fada9418d4f2bcd2d332053c6))
+
 ## [1.37.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.37.0...v1.37.1) (2023-11-08)
 
 
