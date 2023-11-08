@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.46.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.45.0...v1.46.0) (2023-11-08)
+
+
+### Features
+
+* my feature ([508679e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/508679e774722f27bd6df740ff893749ef9c5fd3))
+* my feature1 ([49dd52f](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/49dd52fe66cdda0da63adf7366a3007f9437f645))
+
+
+### Bug Fixes
+
+* rename workflows ([3807b28](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/3807b28371435dcb7fe040d52295b424f08c7086))
+* rename workflows .. ([9d36b1d](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/9d36b1d828ac77594be71c6dfd86712320d6b786))
+
 ## [1.45.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.44.0...v1.45.0) (2023-11-08)
 
 
