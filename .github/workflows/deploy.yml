@@ -7,8 +7,6 @@ on:
       - "demo"
       - "prod"
 
-concurrency: ${{ github.ref_name }}
-
 jobs:
   terraform:
     uses: ./.github/workflows/reusable-terraform-workflow.yaml
