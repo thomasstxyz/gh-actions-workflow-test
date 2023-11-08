@@ -5,8 +5,12 @@ on:
     branches: ["main"]
 
 jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "echo ${{ github.event_name }} ${{ github.ref_name }}"
+
   release-please:
-    if: github.ref == 'refs/heads/main'
     permissions:
       contents: write
       pull-requests: write
