@@ -4,45 +4,19 @@ on:
   release:
     types: [published]
 
-env:
-  TF_VAR_EXOSCALE_API_KEY: '${{ secrets.TF_VAR_EXOSCALE_API_KEY }}'
-  TF_VAR_EXOSCALE_API_SECRET: '${{ secrets.TF_VAR_EXOSCALE_API_SECRET }}'
-
-  # renovate: datasource=github-releases depName=exoscale/cli
-  EXO_CLI_VERSION: v1.74.3
-
-  # renovate: datasource=github-releases depName=hashicorp/terraform
-  TERRAFORM_VERSION: 1.4.1
-  # x 1.5.7
-
-  #
-
-  # renovate: datasource=docker depName=ghcr.io/thomasstxyz/charts/fhb-mcce-aktt2-schuetz-k8s-helm/app
-  AKTT2_PRIVATE_OCI_CHART_VERSION: 0.1.1
-
-  # renovate: datasource=docker depName=ghcr.io/thomasstxyz/gitops-promotions-operator
-  GOPRO_PUBLIC_DOCKER_IMAGE_VERSION: v0.1.1
-
-  # renovate: datasource=github-tags depName=ansible/awx-operator
-  AWX_OPERATOR_VERSION: 2.3.3
-
-  #
-
-  # renovate: datasource=github-tags depName=kubernetes/kubectl
-  KUBECTL_VERSION: v1.21.2
-
-  # test
-  IAC_DEPLOY_KEY: '${{ secrets.IAC_DEPLOY_KEY }}'
-
 jobs:
-  cpr_deploy_demo:
+  create_deploy_pr:
+    strategy:
+      fail-fast: false
+      matrix:
+        environment:
+          - demo
+          - prod
     runs-on: ubuntu-latest
-    concurrency:
-      group: demo
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: demo
+          ref: "${{ matrix.environment }}"
       - name: Reset promotion branch
         run: |
           git fetch origin main:main
@@ -50,31 +24,8 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          branch: demo-promotion
+          branch: "${{ matrix.environment }}-promotion"
           token: ${{ secrets.GH_PAT }}
-          title: "Deploy ${{ github.ref_name }} to demo"
+          title: "Deploy ${{ github.ref_name }} to ${{ matrix.environment }}"
           body: |
-            Merging this PR will deploy ${{ github.ref_name }} to the **demo** environment.
-
-  cpr_deploy_prod:
-    needs:
-      - cpr_deploy_demo
-    runs-on: ubuntu-latest
-    concurrency:
-      group: prod
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: prod
-      - name: Reset promotion branch
-        run: |
-          git fetch origin main:main
-          git reset --hard main
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
-        with:
-          branch: prod-promotion
-          token: ${{ secrets.GH_PAT }}
-          title: "Deploy ${{ github.ref_name }} to prod"
-          body: |
-            Merging this PR will deploy ${{ github.ref_name }} to the **prod** environment.
+            Merging this PR will deploy ${{ github.ref_name }} to the **${{ matrix.environment }}** environment.
