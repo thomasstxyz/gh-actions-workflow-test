@@ -2,7 +2,7 @@ name: Test Changes
 
 on:
   pull_request:
-    branches: ["main", "prod"]
+    branches: ["main", "demo", "prod"]
 
 defaults:
   run:
