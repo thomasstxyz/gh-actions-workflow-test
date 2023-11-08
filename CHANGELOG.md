@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.36.3](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.2...v1.36.3) (2023-11-08)
+
+
+### Bug Fixes
+
+* dont run release-please if event is pr ([24b172d](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/24b172d7e0ee51c9c34b7ac300c9b9e42e476f17))
+* string syntax ([794417c](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/794417c2d7439f6df9842f5c8ba19ee49f338d21))
+
 ## [1.36.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.36.1...v1.36.2) (2023-11-08)
 
 
