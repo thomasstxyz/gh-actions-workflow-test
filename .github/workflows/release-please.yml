@@ -36,8 +36,8 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     env:
-      tag: "${{ steps.release.outputs.tag_name }}"
-      branch: "release-${{ steps.release.outputs.tag_name }}"
+      tag: "${{ needs.release-please.outputs.tag_name }}"
+      branch: "release-${{ needs.release-please.outputs.tag_name }}"
     steps:
       - name: Create release branch
         run: |
