@@ -31,7 +31,7 @@ jobs:
     name: "terraform plan ${{ matrix.environment }}"
     needs:
       - create_matrix
-    uses: ./.github/workflows/reusable-terraform-workflow.yaml
+    uses: ./.github/workflows/terraform.yaml
     strategy:
       fail-fast: false
       matrix:

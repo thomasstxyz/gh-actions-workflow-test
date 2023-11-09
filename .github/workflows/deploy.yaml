@@ -9,7 +9,7 @@ on:
 
 jobs:
   terraform:
-    uses: ./.github/workflows/reusable-terraform-workflow.yaml
+    uses: ./.github/workflows/terraform.yaml
     with:
       environment: "${{ github.ref_name }}"
       action: "apply"
