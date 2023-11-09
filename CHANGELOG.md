@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.51.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.51.1...v1.51.2) (2023-11-09)
+
+
+### Bug Fixes
+
+* moffff ([3648c6e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/3648c6e2f502b9e6e053b789f3b26a0f6ee41291))
+
 ## [1.51.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.51.0...v1.51.1) (2023-11-09)
 
 
