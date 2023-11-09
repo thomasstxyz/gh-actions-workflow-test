@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.54.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.53.0...v1.54.0) (2023-11-09)
+
+
+### Features
+
+* remove fetch tags ([3e95ee7](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/3e95ee73e105a03303c8146d69eb988770795403))
+
 ## [1.53.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.52.1...v1.53.0) (2023-11-09)
 
 
