@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: "${{ matrix.environment }}"
+        # with:
+        #   ref: "${{ matrix.environment }}"
       # - name: Reset promotion branch
       #   run: |
       #     git fetch origin main:main
@@ -25,6 +25,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           branch: "release-${{ github.ref_name }}"
+          base: "${{ matrix.environment }}"
           token: ${{ secrets.GH_PAT }}
           title: "Release ${{ github.ref_name }} to ${{ matrix.environment }}"
           body: |
