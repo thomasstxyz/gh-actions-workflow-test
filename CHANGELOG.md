@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.50.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.0...v1.50.1) (2023-11-09)
+
+
+### Bug Fixes
+
+* gh token pat ([c2fe91d](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/c2fe91d49e98c1196386da01f4b348817e76dea9))
+
 ## [1.50.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.49.0...v1.50.0) (2023-11-09)
 
 
