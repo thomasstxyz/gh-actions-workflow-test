@@ -39,7 +39,9 @@ jobs:
       tag: "${{ needs.release-please.outputs.tag_name }}"
       branch: "release-${{ needs.release-please.outputs.tag_name }}"
     steps:
+      - uses: actions/checkout@v4
       - name: Create release branch
         run: |
+          git fetch --tags
           git branch ${{ env.branch }} ${{ env.tag }}
           git push --set-upstream origin ${{ env.branch }}
