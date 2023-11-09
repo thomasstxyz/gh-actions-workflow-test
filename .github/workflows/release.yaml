@@ -19,7 +19,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Create release branch
         run: |
-          git fetch --tags
           git branch ${{ env.branch }} ${{ env.tag }}
           git push --set-upstream origin ${{ env.branch }}
 
