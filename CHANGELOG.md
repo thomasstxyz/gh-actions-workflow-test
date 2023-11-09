@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.50.6](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.5...v1.50.6) (2023-11-09)
+
+
+### Bug Fixes
+
+* matrix .. ([a34bb6c](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/a34bb6c236664054cc200bc308a9ac1f1c6d4542))
+
 ## [1.50.5](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.4...v1.50.5) (2023-11-09)
 
 
