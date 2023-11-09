@@ -17,6 +17,14 @@ jobs:
         run: |
           MATRIX='["dev", "demo", "prod"]'
 
+          if [ ${{ github.ref_name }} = "demo" ]; then
+            MATRIX='["demo"]'
+          fi
+
+          if [ ${{ github.ref_name }} = "prod" ]; then
+            MATRIX='["prod"]'
+          fi
+
           echo "matrix=${MATRIX}" >> $GITHUB_OUTPUT
 
   terraform:
