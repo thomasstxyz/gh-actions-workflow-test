@@ -8,16 +8,34 @@ on:
       - "prod"
  
 jobs:
+  create_matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.script.outputs.matrix }}
+    steps:
+      - id: script
+        run: |
+          MATRIX='["dev", "demo", "prod"]'
+
+          if [ ${{ github.ref_name }} = "demo" ]; then
+            MATRIX='["demo"]'
+          fi
+
+          if [ ${{ github.ref_name }} = "prod" ]; then
+            MATRIX='["prod"]'
+          fi
+
+          echo "matrix=${MATRIX}" >> $GITHUB_OUTPUT
+
   terraform:
     name: "terraform plan ${{ matrix.environment }}"
+    needs:
+      - create_matrix
     uses: ./.github/workflows/reusable-terraform-workflow.yaml
     strategy:
       fail-fast: false
       matrix:
-        environment:
-          - dev
-          - demo
-          - prod
+        environment: ${{ fromJson(needs.create_matrix.outputs.matrix) }}
     with:
       environment: "${{ matrix.environment }}"
       action: "apply"
