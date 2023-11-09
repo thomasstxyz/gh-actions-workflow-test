@@ -17,15 +17,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: "${{ matrix.environment }}"
-      - name: Reset promotion branch
-        run: |
-          git fetch origin main:main
-          git reset --hard main
+      # - name: Reset promotion branch
+      #   run: |
+      #     git fetch origin main:main
+      #     git reset --hard main
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          branch: "${{ matrix.environment }}-promotion"
+          branch: "release-${{ github.ref_name }}"
           token: ${{ secrets.GH_PAT }}
           title: "Release ${{ github.ref_name }} to ${{ matrix.environment }}"
           body: |
-            Merging this PR will deploy ${{ github.ref_name }} to the **${{ matrix.environment }}** environment.
+            Merging this PR will deploy the branch 'release-${{ github.ref_name }}' to the **${{ matrix.environment }}** environment.
