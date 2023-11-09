@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.50.5](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.4...v1.50.5) (2023-11-09)
+
+
+### Bug Fixes
+
+* create pr ([bf4d0b5](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/bf4d0b52c8dd82745adb1c4280df9490c2dd4e0e))
+
 ## [1.50.4](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.3...v1.50.4) (2023-11-09)
 
 
