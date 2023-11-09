@@ -17,7 +17,7 @@ jobs:
         run: |
           MATRIX='["dev", "demo", "prod"]'
 
-          echo "::set-output name=matrix::${MATRIX}"
+          echo "matrix=${MATRIX}" >> $GITHUB_OUTPUT
 
   terraform:
     name: "terraform plan ${{ matrix.environment }}"
