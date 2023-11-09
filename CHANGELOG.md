@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.49.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.48.0...v1.49.0) (2023-11-09)
+
+
+### Features
+
+* blaurnzn ([ef5bf94](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/ef5bf94646faaac81710f1d445c83a74e168a90b))
+
 ## [1.48.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.47.0...v1.48.0) (2023-11-09)
 
 
