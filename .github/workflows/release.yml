@@ -23,7 +23,7 @@ jobs:
       #     git reset --hard main
       - uses: oleksiyrudenko/gha-git-credentials@v2-latest
         with:
-          token: '${{ secrets.GH_PAT }}'
+          token: '${{ secrets.GITHUB_TOKEN }}'
       - name: Create release branch
         run: |
           git checkout -b "release-${{ github.ref_name }}"
