@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.51.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.51.0...v1.51.1) (2023-11-09)
+
+
+### Bug Fixes
+
+* dvw -_- ([9c249ef](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/9c249ef6fe651b1e1d745271da363740d8b9158d))
+* mof ([6cde110](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/6cde11042ff5ed92eb806586abf47d9cd9ad9989))
+
 ## [1.51.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.6...v1.51.0) (2023-11-09)
 
 
