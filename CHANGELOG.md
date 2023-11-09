@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.50.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.49.0...v1.50.0) (2023-11-09)
+
+
+### Features
+
+* probia ma unsa glick ([e341a16](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/e341a16a8470d80fd9c88239f706490e730188e4))
+
 ## [1.49.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.48.0...v1.49.0) (2023-11-09)
 
 
