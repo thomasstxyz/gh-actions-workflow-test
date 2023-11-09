@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.50.3](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.2...v1.50.3) (2023-11-09)
+
+
+### Bug Fixes
+
+* tokkken ([3f89f70](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/3f89f7052b2cc16a8868587442c774cee7b64abc))
+
 ## [1.50.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.1...v1.50.2) (2023-11-09)
 
 
