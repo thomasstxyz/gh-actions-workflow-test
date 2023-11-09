@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.52.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.52.0...v1.52.1) (2023-11-09)
+
+
+### Bug Fixes
+
+* blurnzn ([eca8a33](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/eca8a33285c59e40ba9a5a350bfd8ed8ad6dc24c))
+
 ## [1.52.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.51.4...v1.52.0) (2023-11-09)
 
 
