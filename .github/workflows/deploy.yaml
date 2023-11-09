@@ -9,6 +9,7 @@ on:
 
 jobs:
   terraform:
+    name: "deploy ${{ github.ref_name }}"
     uses: ./.github/workflows/terraform.yaml
     with:
       environment: "${{ github.ref_name }}"
