@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.50.4](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.3...v1.50.4) (2023-11-09)
+
+
+### Bug Fixes
+
+* perms ([a168611](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/a1686110889090a3830e0f77bc2b0204580c42d5))
+
 ## [1.50.3](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.2...v1.50.3) (2023-11-09)
 
 
