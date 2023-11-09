@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.48.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.47.0...v1.48.0) (2023-11-09)
+
+
+### Features
+
+* change pr branch name to release-* ([f0e504e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/f0e504e50028ccad3a41f06025ce5853d9836000))
+* dynamically set matrix ([95e1c6e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/95e1c6ecd9840076acff50abb82142beb370ea28))
+* generate matrix for test workflow ([2cfc396](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/2cfc3966b4d687537e50d859741ac5d52e519f9e))
+
+
+### Bug Fixes
+
+* change gh actions syntax ([ec169bb](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/ec169bb6c887f0ec5a7e951b111d9fa66acfd42a))
+
 ## [1.47.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.46.0...v1.47.0) (2023-11-09)
 
 
