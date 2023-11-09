@@ -6,11 +6,6 @@ on:
       - 'main'
 
 jobs:
-  debug:
-    runs-on: ubuntu-latest
-    steps:
-      - run: "date"
-
   release-please:
     permissions:
       contents: write
