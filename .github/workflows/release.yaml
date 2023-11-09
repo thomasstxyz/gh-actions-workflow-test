@@ -1,0 +1,46 @@
+name: release
+
+on:
+  release:
+    types:
+      - "published"
+
+env:
+  tag: "${{ github.ref_name }}"
+  branch: "release-${{ github.ref_name }}"
+
+jobs:
+  create-release-branch:
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create release branch
+        run: |
+          git fetch --tags
+          git branch ${{ env.branch }} ${{ env.tag }}
+          git push --set-upstream origin ${{ env.branch }}
+
+  create_deploy_pr:
+    needs:
+      - create-release-branch
+    strategy:
+      fail-fast: false
+      matrix:
+        environment:
+          - demo
+          - prod
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: create pull request
+        run: >
+          gh pr create
+          -B "${{ matrix.environment }}"
+          -H "${{ env.branch }}"
+          --title "Release ${{ env.tag }} to ${{ matrix.environment }}"
+          --body "Merging this PR will deploy the branch '${{ env.branch }}' to the **${{ matrix.environment }}** environment."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
