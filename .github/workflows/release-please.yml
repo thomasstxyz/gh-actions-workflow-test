@@ -28,7 +28,7 @@ jobs:
           token: ${{ secrets.GH_PAT }}
 
   create-release-branch:
-    if: needs.release-please.outputs.releases-created == 'true'
+    if: needs.release-please.outputs.releases_created == 'true'
     needs:
       - release-please
     permissions:
