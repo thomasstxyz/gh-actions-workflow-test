@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.52.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.51.4...v1.52.0) (2023-11-09)
+
+
+### Features
+
+* rename files ([bd8a2c9](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/bd8a2c925920685c71f0988c4ac4983b576bded7))
+
+
+### Bug Fixes
+
+* remove debug job ([8896bb4](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/8896bb4f2d10ceea188de21fcb4b39d103dfd41d))
+
 ## [1.51.4](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.51.3...v1.51.4) (2023-11-09)
 
 
