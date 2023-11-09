@@ -17,11 +17,11 @@ jobs:
         run: |
           MATRIX='["dev", "demo", "prod"]'
 
-          if [ ${{ github.ref_name }} = "demo" ]; then
+          if [ ${{ github.base_ref }} = "demo" ]; then
             MATRIX='["demo"]'
           fi
 
-          if [ ${{ github.ref_name }} = "prod" ]; then
+          if [ ${{ github.base_ref }} = "prod" ]; then
             MATRIX='["prod"]'
           fi
 
