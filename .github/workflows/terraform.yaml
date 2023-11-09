@@ -57,7 +57,7 @@ env:
   AKTT2_PRIVATE_OCI_CHART_VERSION: 0.1.1
 
   # renovate: datasource=docker depName=ghcr.io/thomasstxyz/gitops-promotions-operator
-  GOPRO_PUBLIC_DOCKER_IMAGE_VERSION: v0.1.1
+  GOPRO_PUBLIC_DOCKER_IMAGE_VERSION: v0.1.6
 
   # renovate: datasource=github-tags depName=ansible/awx-operator
   AWX_OPERATOR_VERSION: 2.3.3
