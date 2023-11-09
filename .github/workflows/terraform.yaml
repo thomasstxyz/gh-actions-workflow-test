@@ -63,7 +63,7 @@ env:
   AWX_OPERATOR_VERSION: 2.3.3
 
 jobs:
-  reusable_workflow_job:
+  terraform:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
