@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.51.3](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.51.2...v1.51.3) (2023-11-09)
+
+
+### Bug Fixes
+
+* move branch creation to other workflow ([49b06fd](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/49b06fd00d81ddeda4b91dda404a5e7574ee1ed8))
+
 ## [1.51.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.51.1...v1.51.2) (2023-11-09)
 
 
