@@ -1,5 +1,116 @@
 # Changelog
 
+## [1.51.3](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.51.2...v1.51.3) (2023-11-09)
+
+
+### Bug Fixes
+
+* move branch creation to other workflow ([49b06fd](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/49b06fd00d81ddeda4b91dda404a5e7574ee1ed8))
+
+## [1.51.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.51.1...v1.51.2) (2023-11-09)
+
+
+### Bug Fixes
+
+* moffff ([3648c6e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/3648c6e2f502b9e6e053b789f3b26a0f6ee41291))
+
+## [1.51.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.51.0...v1.51.1) (2023-11-09)
+
+
+### Bug Fixes
+
+* dvw -_- ([9c249ef](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/9c249ef6fe651b1e1d745271da363740d8b9158d))
+* mof ([6cde110](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/6cde11042ff5ed92eb806586abf47d9cd9ad9989))
+
+## [1.51.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.6...v1.51.0) (2023-11-09)
+
+
+### Features
+
+* fixxxxx ([565db8e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/565db8e37ec23167d9b3a3887d1fa08752851c0e))
+
+
+### Bug Fixes
+
+* mmfd ([76d02f6](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/76d02f6353a9b4d1e52d9c46b3bbbdad2c0e5787))
+
+## [1.50.6](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.5...v1.50.6) (2023-11-09)
+
+
+### Bug Fixes
+
+* matrix .. ([a34bb6c](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/a34bb6c236664054cc200bc308a9ac1f1c6d4542))
+
+## [1.50.5](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.4...v1.50.5) (2023-11-09)
+
+
+### Bug Fixes
+
+* create pr ([bf4d0b5](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/bf4d0b52c8dd82745adb1c4280df9490c2dd4e0e))
+
+## [1.50.4](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.3...v1.50.4) (2023-11-09)
+
+
+### Bug Fixes
+
+* perms ([a168611](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/a1686110889090a3830e0f77bc2b0204580c42d5))
+
+## [1.50.3](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.2...v1.50.3) (2023-11-09)
+
+
+### Bug Fixes
+
+* tokkken ([3f89f70](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/3f89f7052b2cc16a8868587442c774cee7b64abc))
+
+## [1.50.2](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.1...v1.50.2) (2023-11-09)
+
+
+### Bug Fixes
+
+* patttt ([dc21b48](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/dc21b4812bb227d1147e55490a37f0423e81124c))
+
+## [1.50.1](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.50.0...v1.50.1) (2023-11-09)
+
+
+### Bug Fixes
+
+* gh token pat ([c2fe91d](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/c2fe91d49e98c1196386da01f4b348817e76dea9))
+
+## [1.50.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.49.0...v1.50.0) (2023-11-09)
+
+
+### Features
+
+* probia ma unsa glick ([e341a16](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/e341a16a8470d80fd9c88239f706490e730188e4))
+
+## [1.49.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.48.0...v1.49.0) (2023-11-09)
+
+
+### Features
+
+* blaurnzn ([ef5bf94](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/ef5bf94646faaac81710f1d445c83a74e168a90b))
+
+## [1.48.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.47.0...v1.48.0) (2023-11-09)
+
+
+### Features
+
+* change pr branch name to release-* ([f0e504e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/f0e504e50028ccad3a41f06025ce5853d9836000))
+* dynamically set matrix ([95e1c6e](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/95e1c6ecd9840076acff50abb82142beb370ea28))
+* generate matrix for test workflow ([2cfc396](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/2cfc3966b4d687537e50d859741ac5d52e519f9e))
+
+
+### Bug Fixes
+
+* change gh actions syntax ([ec169bb](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/ec169bb6c887f0ec5a7e951b111d9fa66acfd42a))
+
+## [1.47.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.46.0...v1.47.0) (2023-11-09)
+
+
+### Features
+
+* feature2 ([309acc6](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/309acc6da68440b178dd41ce559724fad3631c75))
+
 ## [1.46.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.45.0...v1.46.0) (2023-11-08)
 
 
