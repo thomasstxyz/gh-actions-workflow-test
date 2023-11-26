@@ -2,16 +2,15 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
 	"name": "Ubuntu",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:jammy",
-	"containerEnv": {
-		"MY_CONTAINER_VAR": "some-value-here",
+	"build": { "dockerfile": "Dockerfile" },
+	"remoteEnv": {
 		"TF_VAR_EXOSCALE_API_KEY": "${localEnv:TF_VAR_EXOSCALE_API_KEY}",
 		"TF_VAR_EXOSCALE_API_SECRET": "${localEnv:TF_VAR_EXOSCALE_API_SECRET}"
 	},
 		"features": {
 		"ghcr.io/devcontainers/features/terraform:1": {},
-		"ghcr.io/devcontainers-contrib/features/terraform-docs:1": {}
+		"ghcr.io/devcontainers-contrib/features/terraform-docs:1": {},
+		"ghcr.io/devcontainers-contrib/features/go-task:1": {}
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.

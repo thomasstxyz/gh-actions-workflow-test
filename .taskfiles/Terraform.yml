@@ -1,0 +1,23 @@
+---
+version: "3"
+
+tasks:
+  init:
+    desc: terraform init
+    cmds:
+      - terraform -chdir=terraform/line-infra init
+
+  plan:
+    desc: terraform plan
+    cmds:
+      - terraform -chdir=terraform/line-infra plan
+
+  apply:
+    desc: terraform apply
+    cmds:
+      - terraform -chdir=terraform/line-infra apply
+
+  destroy:
+    desc: terraform destroy
+    cmds:
+      - terraform -chdir=terraform/line-infra destroy

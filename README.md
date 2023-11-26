@@ -53,3 +53,23 @@ export TF_VAR_EXOSCALE_API_SECRET=$(op item get jgn5q7ysbus2hsxa26sojgzxyq --fie
 ```
 
 > Replace the id `jgn5q7ysbus2hsxa26sojgzxyq` with the id of your vault item containing the credentials.
+
+## Taskfile & Devcontainer
+
+Open the devcontainer:
+
+```
+task devcontainer:open
+```
+
+Inside the devcontainer's shell:
+
+```
+task terraform:init
+```
+The autocompletion works by hitting <kbd>Tab</kbd> twice after writing `task` and one blank character.
+
+```
+vscode ➜ /workspaces/gh-actions-workflow-test (main) $ task terraform:
+apply    destroy  init     plan     
+```

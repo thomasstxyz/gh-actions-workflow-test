@@ -1,0 +1,18 @@
+---
+version: "3"
+
+tasks:
+  open:
+    desc: Open a dev container in VS Code
+    cmds:
+      - devcontainer open .
+
+  up:
+    desc: Create and run dev container
+    cmds:
+      - devcontainer up
+
+  build:
+    desc: Build a dev container image
+    cmds:
+      - devcontainer build .
