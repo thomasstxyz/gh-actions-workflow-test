@@ -43,3 +43,13 @@ Further Resources:
 - https://docs.renovatebot.com/getting-started/private-packages/#github-packages
 - https://github.com/renovatebot/renovate/discussions/22347
 - https://dille.name/blog/2022/11/27/using-private-container-registries-with-renovate/
+
+## Direnv
+
+Create `.envrc` file with the following content:
+```
+export TF_VAR_EXOSCALE_API_KEY=$(op item get jgn5q7ysbus2hsxa26sojgzxyq --fields label=username)
+export TF_VAR_EXOSCALE_API_SECRET=$(op item get jgn5q7ysbus2hsxa26sojgzxyq --fields label=password)
+```
+
+> Replace the id `jgn5q7ysbus2hsxa26sojgzxyq` with the id of your vault item containing the credentials.

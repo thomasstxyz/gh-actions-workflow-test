@@ -6,6 +6,7 @@ provider "registry.terraform.io/exoscale/exoscale" {
   constraints = "0.53.1"
   hashes = [
     "h1:DbDYBSuIDMM8iOe6wcwDdWwGip/Hvf8cnUm3hJHauKE=",
+    "h1:XXvFtPe9mhU/id5mOSQqBecEPoXNb6hpm+AQDumtknA=",
     "zh:2b82b71efca7e94f64bf7ef5642198d4f996faeb8d4561a8873d1ec73b5d61f5",
     "zh:4310ac2a10b9aa26cb2c6a945452b117c1fbc1e79a1766415a30f3796cde4629",
     "zh:4554b37d032891d54e1b5e7961f806cbe6e3ed07eeb85d748ad9f514765737f0",
