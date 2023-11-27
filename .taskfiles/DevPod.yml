@@ -1,0 +1,18 @@
+---
+version: "3"
+
+tasks:
+  up-ide-openvscode:
+    desc: Start DevPod in VS Code browser
+    cmds:
+      - devpod up . --ide openvscode
+
+  up-ide-vscode:
+    desc: Start DevPod in VS Code
+    cmds:
+      - devpod up . --ide vscode
+
+  up-ide-none:
+    desc: Start DevPod without IDE
+    cmds:
+      - devpod up . --ide none
