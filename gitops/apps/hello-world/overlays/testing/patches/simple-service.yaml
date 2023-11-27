@@ -4,4 +4,4 @@ metadata:
   name: simple-service
   namespace: default
 spec:
-  externalTrafficPolicy: Local
+  type: ClusterIP
