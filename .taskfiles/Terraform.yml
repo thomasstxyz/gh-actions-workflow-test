@@ -17,7 +17,17 @@ tasks:
     cmds:
       - terraform -chdir=terraform/line-infra apply
 
+  apply-auto-approve:
+    desc: terraform apply -auto-approve
+    cmds:
+      - terraform -chdir=terraform/line-infra apply -auto-approve
+
   destroy:
     desc: terraform destroy
     cmds:
       - terraform -chdir=terraform/line-infra destroy
+
+  destroy-auto-approve:
+    desc: terraform destroy -auto-approve
+    cmds:
+      - terraform -chdir=terraform/line-infra destroy -auto-approve
