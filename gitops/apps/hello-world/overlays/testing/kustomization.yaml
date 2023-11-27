@@ -4,3 +4,4 @@ resources:
 - ../../base
 patches:
   - path: patches/simple-deployment.yaml
+  - path: patches/simple-service.yaml
