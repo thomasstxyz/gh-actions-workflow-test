@@ -1,6 +1,6 @@
 # begin renovate regex
 repoURL: https://kubernetes-sigs.github.io/descheduler
-targetRevision: 0.24.1
+targetRevision: 0.28.1
 chart: descheduler
 # end renovate regex
 namespace: kube-system
