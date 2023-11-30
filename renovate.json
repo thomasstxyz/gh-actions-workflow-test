@@ -24,6 +24,26 @@
       "datasourceTemplate": "helm"
     }
   ],
+  "packageRules": [
+    {
+      "matchPaths": ["*/dev/**"],
+      "packagePatterns": [".*"],
+      "additionalBranchPrefix": "dev-",
+      "commitMessageSuffix": "(dev)"
+    },
+    {
+      "matchPaths": ["*/demo/**"],
+      "packagePatterns": [".*"],
+      "additionalBranchPrefix": "demo-",
+      "commitMessageSuffix": "(demo)"
+    },
+    {
+      "matchPaths": ["*/prod/**"],
+      "packagePatterns": [".*"],
+      "additionalBranchPrefix": "prod-",
+      "commitMessageSuffix": "(prod)"
+    }
+  ],
   "hostRules": [
     {
       "matchHost": "https://ghcr.io/thomasstxyz/charts/fhb-mcce-aktt2-schuetz-k8s-helm/app",
