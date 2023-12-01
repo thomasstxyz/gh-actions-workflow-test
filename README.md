@@ -60,6 +60,8 @@ Open the devcontainer:
 
 ```
 task devcontainer:open
+# specify docker endpoint, if needed
+DOCKER_HOST=unix:///Users/$USER/.rd/docker.sock task devcontainer:open
 ```
 
 Inside the devcontainer's shell:
