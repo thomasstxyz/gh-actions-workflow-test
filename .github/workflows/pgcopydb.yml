@@ -24,6 +24,7 @@ jobs:
 
       - name: Install basic packages not present in pgcopydb image
         run: |
+          sudo apt-get update
           DEBIAN_FRONTEND=noninteractive sudo apt install -y \
             gnupg
             wget
