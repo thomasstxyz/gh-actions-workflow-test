@@ -13,7 +13,9 @@ env:
 
 jobs:
   deploy:
-    runs-on: docker.io/dimitri/pgcopydb:v0.14
+    runs-on: ubuntu-latest
+    container:
+      image: docker.io/dimitri/pgcopydb:v0.14
     steps:
       - name: Show version of postgresql-client
         run: |
