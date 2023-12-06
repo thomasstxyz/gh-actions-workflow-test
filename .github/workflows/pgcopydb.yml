@@ -1,0 +1,42 @@
+name: Clone DB
+run-name: "Clone DB by @${{ github.actor }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      tenant_name:
+        description: 'C Name'
+        required: true
+
+env:
+  POSTGRESQL_VERSION: 14
+
+jobs:
+  deploy:
+    runs-on: docker.io/dimitri/pgcopydb:v0.14
+    steps:
+      - name: Show version of postgresql-client
+        run: |
+          pg_dump --version
+          pg_restore --version
+
+      - name: Install basic packages not present in pgcopydb image
+        run: |
+          DEBIAN_FRONTEND=noninteractive sudo apt install -y \
+            gnupg
+            wget
+      - name: Install specific version of postgresql-client
+        run: |
+          echo 'deb http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main' | sudo tee -a /etc/apt/sources.list.d/pgdg.list
+          wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+          sudo apt-get update
+          DEBIAN_FRONTEND=noninteractive sudo apt install -y postgresql-client-$POSTGRESQL_VERSION
+
+      - name: Show version of pgcopydb
+        run: |
+          pgcopydb --version
+
+      - name: Show version of postgresql-client
+        run: |
+          pg_dump --version
+          pg_restore --version
