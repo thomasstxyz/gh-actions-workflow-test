@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.56.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.55.0...v1.56.0) (2023-12-15)
+
+
+### Features
+
+* add .taskfiles/DevPod.yml ([9bb1113](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/9bb1113d44ef91e6a9450aa75a2e74e86eaad907))
+* add deploy patch in testing project ([24cacf6](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/24cacf62712017594d5e86157cb04d9603004551))
+* add devcontainer.json ([3dbeb35](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/3dbeb355868def659150484bf90ba690ebe71058))
+* add pgcopydb workflow ([d117ad3](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/d117ad33372d16296e19e00d9c7a080da9c22b64))
+* add platform/dev ([07bf4f0](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/07bf4f0b2a3b301cd019f298b44cd6bb4bba73a3))
+* add vsliveshare extension ([2a59257](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/2a59257d16aab78998c9c40f14560bdca82c2376))
+* change tf ([aa32c2f](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/aa32c2f3f3507f3754b00823f22b24f54f2de706))
+* create one pr per package and per stage ([f799a33](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/f799a331d7025433e98892b83ab15d16a900a7f9))
+* install git-releaser ([db975f0](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/db975f05145be15c550b587a17e7eada25fb0d27))
+* new feature xy ([0aabee1](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/0aabee1572a072b2dc2b7848de9544b35ced5196))
+* renovate, group deps per directory ([9e4cfe7](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/9e4cfe714a555cef033b2cb1bf393e61371b37a2))
+* working devcontainer, env vars, taskfile, .. ([4f53a4c](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/4f53a4c00c0b56716efab34995b9fc98ea4da5cb))
+
+
+### Bug Fixes
+
+* add 'sudo apt-get update' ([d0d2746](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/d0d27460b452ccb37ff8fced1f4843a481aaea52))
+* backslash ([0aaf93c](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/0aaf93c066121d1f0acd98e53aeb1aea7aad9817))
+* gh actions syntax container image runner ([799b6ff](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/799b6ff76b588ed610c3b15310df8855fb85ee2e))
+* git clone with auth ([58343ec](https://github.com/thomasstxyz/gh-actions-workflow-test/commit/58343ec7c641004d59b19b475774575537d39bee))
+
 ## [1.55.0](https://github.com/thomasstxyz/gh-actions-workflow-test/compare/v1.54.0...v1.55.0) (2023-11-09)
 
 
