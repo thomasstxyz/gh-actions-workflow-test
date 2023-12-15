@@ -75,3 +75,4 @@ The autocompletion works by hitting <kbd>Tab</kbd> twice after writing `task` an
 vscode ➜ /workspaces/gh-actions-workflow-test (main) $ task terraform:
 apply    destroy  init     plan     
 ```
+
