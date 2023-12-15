@@ -1,19 +1,18 @@
 stages:
   - release
 
-variables:
-  DOCKER_IMAGE: "ghcr.io/git-releaser/git-releaser:dev-202312092322"
-  GIT_RELEASER_PROVIDER: "gitlab"
-  GIT_RELEASER_USER_ID: "11274974"
-  GIT_RELEASER_TOKEN: $PAT
-  GIT_RELEASER_PROJECT_URL: "https://gitlab.com/thomasstxyz/gh-actions-workflow-test"
-  GIT_RELEASER_PROJECT_ID: $CI_PROJECT_ID
-
 run-release:
+  variables:
+    DOCKER_IMAGE: "ghcr.io/git-releaser/git-releaser:dev-202312092322"
+    GIT_RELEASER_PROVIDER: "gitlab"
+    GIT_RELEASER_USER_ID: "thomasstxyz"
+    GIT_RELEASER_TOKEN: $PAT  # PAT is saved as a CI/CD variable
+    GIT_RELEASER_PROJECT_URL: "https://$GIT_RELEASER_USER_ID:$GIT_RELEASER_TOKEN@gitlab.com/thomasstxyz/gh-actions-workflow-test"
+    GIT_RELEASER_PROJECT_ID: $CI_PROJECT_ID
   stage: release
   script:
-    - git clone $GIT_RELEASER_PROJECT_URL
-    - cd gh-actions-workflow-test
+    - mkdir repo ; cd repo
+    - git clone $GIT_RELEASER_PROJECT_URL .
     - /git-releaser update
   image:
     name: $DOCKER_IMAGE
