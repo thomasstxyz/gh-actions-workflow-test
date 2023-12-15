@@ -2,7 +2,7 @@ stages:
   - release
 
 variables:
-  DOCKER_IMAGE: "ghcr.io/git-releaser/git-releaser:dev-202312060656"
+  DOCKER_IMAGE: "ghcr.io/git-releaser/git-releaser:dev-202312092322"
   GIT_RELEASER_PROVIDER: "gitlab"
   GIT_RELEASER_USER_ID: "11274974"
   GIT_RELEASER_TOKEN: $PAT
