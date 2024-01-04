@@ -60,7 +60,7 @@ env:
   GOPRO_PUBLIC_DOCKER_IMAGE_VERSION: v0.1.1
 
   # renovate: datasource=github-tags depName=ansible/awx-operator
-  AWX_OPERATOR_VERSION: 2.3.3
+  AWX_OPERATOR_VERSION: 2.10.0
 
   TF_VAR_EXOSCALE_API_KEY: "${{ secrets.TF_VAR_EXOSCALE_API_KEY }}"
   TF_VAR_EXOSCALE_API_SECRET: "${{ secrets.TF_VAR_EXOSCALE_API_SECRET }}"
